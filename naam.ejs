@@ -1,0 +1,236 @@
+<!doctype html>
+<html ⚡  lang="en">
+  <head>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script> 
+    <meta charset="utf-8">
+    <link rel="icon" href="%PUBLIC_URL%/Times_Ascent_Icon.png" />
+    <% mdata?.map((post) => { %>
+    <title>stories.timesascent.com/<%= post.TitleType %>/<%= post.WebStoriesSummaryID %></title>
+    <% }); %>
+    <link rel="icon" href="/public/Times_Ascent_Icon.png" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <script async custom-element="amp-video"
+        src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <script async custom-element="amp-story"
+        src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+        <link
+        rel="dns-prefetch"
+        href="https://www.google-analytics.com/analytics.js"
+      />
+
+     <link rel="canonical" href = <%= orgurl %>/>
+  
+
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://stories.sasone.in/:title/:id"
+        },
+        "headline": "",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://api.timesascent.com/static/Images/wecare/Tips_to_Create_1080/2022/10/12/1665558422.jpg",
+          "width": "720",
+          "height": "1280"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "timesascent"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://timesascent.com/newimages/main/times_ascent_logo.svg",
+            "width": "140",
+            "height": "20"
+          }
+        },
+        "datePublished": "2022-11-10"
+      }
+      </script>
+    <style amp-custom>
+      amp-story {
+        font-family: 'Oswald',sans-serif;
+        color: #fff;
+      }
+      amp-story-page {
+        background-color: #000;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 2.875em;
+        font-weight: normal;
+        line-height: 1.174;
+      }
+      p {
+        font-weight: normal;
+        font-size: 1.3em;
+        line-height: 1.5em;
+        color: #fff;
+      }
+      q {
+        font-weight: 300;
+        font-size: 1.1em;
+      }
+      amp-story-grid-layer.bottom {
+        align-content:end;
+      }
+      amp-story-grid-layer.noedge {
+        padding: 0px;
+      }
+      amp-story-grid-layer.center-text {
+        align-content: center;
+      }
+
+      .Header {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 85%;
+  }
+  .loader {
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+  }
+
+  .desct1 {
+    background: rgba(00, 00, 00, 0.5);
+    padding: 10px;
+
+    font-size: 22px;
+    color: #fff;
+  }
+  .desct {
+    background: rgba(00, 00, 00, 0.5);
+    padding: 10px;
+    color: #fff;
+  }
+  
+  .heading {
+    background: rgba(00, 00, 00, 0.5);
+    padding: 10px;
+    color: #fff;
+  }
+
+  .btnnew {
+  background: #f02f39;
+  border: 0;
+  border-radius: 5px;
+  max-width: 150px;
+  padding: 12px 10px;
+  font-size: 15px;
+  margin: 0 auto;
+  margin-top: 220px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+.btnnewa {
+  text-decoration: none;
+  color: #ffff;
+}
+.btnnewa:hover {
+  color: #ffff;
+}      
+    </style>
+  </script>
+  </head>
+  <body>
+
+    <amp-story standalone
+        publisher = ""
+        title="Times Ascent"
+        publisher-logo-src="https://timesascent.com/newimages/main/times_ascent_logo.svg"
+        poster-portrait-src="https://timesascent.com/newimages/main/times_ascent_logo.svg">
+
+        <amp-analytics type="gtag" data-credentials="include">
+          <script type="application/json">
+          {
+            "vars" : {
+              "gtag_id": "UA-71301443-1",
+              "config" : {
+                "UA-71301443-1": { "groups": "default" }
+              }
+            }
+          }
+          </script>
+        </amp-analytics>
+
+     
+        <% mdata?.map((post) => { %>
+          <amp-story-page id="<%= post.ID %>" auto-advance-after="5s">
+               <amp-story-grid-layer 
+               template="fill"
+               >
+                 <amp-img src="<%= post.DImage %>"
+                     width="720" height="1280"
+                     layout="responsive">
+                 </amp-img>
+                
+               </amp-story-grid-layer>
+               <amp-story-grid-layer template="vertical">
+
+          
+
+              <div class="writer" style="transform: translate(-15px, -45px);"> 
+                <span class="logo-thumb blkBg">
+                <amp-img data-hero="" src="https://timesascent.com/newimages/main/times_ascent_logo.svg" width="140" height="20" alt="herzindagi logo" layout="fixed" style="width: 120px; height: 40px;">
+                </span> </div>
+                
+          
+                <% if(post.TitleType === ""){ %>
+               <h1></h1>
+             <%} else{ %>
+              <h1 class="desct1">"<%= post.TitleType.toUpperCase() %>"</h1>
+              <% } %>
+
+
+              <% if(post.DescriptionType === ""){ %>
+                <p></p>
+                <%} else{ %>
+                 <p class="desct">"<%= post.DescriptionType %>"</p>
+                 <% } %>
+
+
+                 <% if(post.headtext === ""){ %>
+                  <p></p>
+                  <%} else{ %>
+                    <h2 class="heading">"<%=post.headtext%>"</h2>
+                   <% } %>
+
+
+                 <% if(post.url === ""){ %>
+                  <p></p>
+                  <%} else{ %>
+                    <span class="btnnew">
+                      <a
+                        href="<%=post.url%>"
+                        tabindex="0"
+                        class="btnnewa"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Click Here
+                      </a>
+                    </span>
+                    <% } %>
+
+               </amp-story-grid-layer>
+             </amp-story-page>
+   
+             <% }); %>
+    </amp-story>
+  
+  </body>
+</html>
