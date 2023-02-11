@@ -1,11 +1,11 @@
 
 import Head from "next/head";
-
+import { useAmp } from 'next/amp'
 
 export const config = { amp: true };
 
 const webstoryid = () => {
-
+    const isAmp = useAmp()
     return (
       <>
         <Head>        
@@ -77,7 +77,7 @@ const webstoryid = () => {
             src="https://cdn.ampproject.org/v0/amp-story-1.0.js"
           />
         </Head>
-        <amp-story
+     {isAmp ?<amp-story
           standalone=""
           title="Stories in AMP"
           publisher="AMP project"
@@ -90,20 +90,20 @@ const webstoryid = () => {
                 auto-advance-after="4s"
               >
                 <amp-story-grid-layer template="vertical">
-                  <amp-img
+                <amp-img
                     src="https://images.unsplash.com/photo-1676085272023-91fce74ee32b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                     alt="dfdf"
                     height="555px"
                     width="300px"
                     layout="fill"
                     animate-in="fly-in-top"
-                  ></amp-img>
+                  /> 
                 </amp-story-grid-layer>
                 
               </amp-story-page>
            
         
-        </amp-story>
+        </amp-story> : <div>not amp</div>}   
 
         <style jsx>{`
           amp-story {
