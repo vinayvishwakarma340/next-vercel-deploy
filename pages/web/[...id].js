@@ -1,4 +1,6 @@
 
+import { webStoriesDetailApi } from "../api/webStoriesApi";
+
 import { useAmp } from 'next/amp'
 import Head from 'next/head'
 export const config = { amp: true }
@@ -49,5 +51,13 @@ const arr=["https://images.unsplash.com/photo-1676085272023-91fce74ee32b?ixlib=r
    
   )
 }
-
+export async function getServerSideProps(context) {
+    const WebStoryDetailListdata = await webStoriesDetailApi({
+      WebStoriesSummaryID: context.query.id[1],
+    });
+  
+    return {
+      props: { WebStoryDetailListdata },
+    };
+  }
 export default About
