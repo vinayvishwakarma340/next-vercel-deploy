@@ -35,11 +35,12 @@ function About(props) {
 
 
 
-    </Head> <div>
+    </Head> 
 
+        isAmp ? (
+          <div>
         <h3>My AMP About Page!</h3>
-        {isAmp ? (
-          WebStoriesDetails.map((i) => <amp-story
+         { WebStoriesDetails.map((i) => <amp-story
             standalone={false}
             publisher=""
             title="Times Ascent"
@@ -53,11 +54,11 @@ function About(props) {
                 src={i.DImage}
                 alt="a cool image"
                 layout="responsive"
-              /></amp-story-grid-layer> </amp-story-page></amp-story>)
-        ) : (
+              /></amp-story-grid-layer> </amp-story-page></amp-story> )
+         }</div>: (
           <img width="300" height="300" src="https://plus.unsplash.com/premium_photo-1661962548081-071712b709ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=2000&q=60" alt="a cool image" />
-        )}
-      </div></>
+        )
+     </>
 
   )
 }
