@@ -39,7 +39,7 @@ function About(props) {
 
    
  
-    <amp-story
+  isAmp ?   <amp-story
         standalone=""
         title="Hello Story"
         publisher="The AMP Team"
@@ -58,7 +58,7 @@ function About(props) {
               alt="a cool image"
               layout="responsive"
             /></amp-story-grid-layer> </amp-story-page>)
-        }</amp-story>
+        }</amp-story>:<div>invalid amp</div>
     </>
 
   )
