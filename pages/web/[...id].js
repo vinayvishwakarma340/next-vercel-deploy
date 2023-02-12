@@ -13,7 +13,7 @@ function About(props) {
   return (
     <> <Head>
       <script async src="https://cdn.ampproject.org/v0.js"></script>
-      <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+      {/* <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script> */}
 
       <link rel="icon" href="/Times_Ascent_Icon.png" />
 
@@ -25,10 +25,10 @@ function About(props) {
 
       <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
       <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
-      <link
+      {/* <link
         rel="dns-prefetch"
         href="https://www.google-analytics.com/analytics.js"
-      />
+      /> */}
 
       <link rel="canonical" href="/dfg" />
 
