@@ -39,7 +39,7 @@ function About(props) {
 
    
  
-  isAmp ?   <amp-story
+    <amp-story
         standalone=""
         title="Hello Story"
         publisher="The AMP Team"
@@ -49,7 +49,7 @@ function About(props) {
         {WebStoriesDetails.map((i) =>
    
           <amp-story-page id="dfd" auto-advance-after="5s"> 
-              <amp-story-grid-layer aspect-ratio="9:16" template="vertical">
+              <amp-story-grid-layer aspect-ratio="9:16" template="vertical" >
                 <amp-img
               className="ampimg"
               width="300"
@@ -58,7 +58,7 @@ function About(props) {
               alt="a cool image"
               layout="responsive"
             /></amp-story-grid-layer> </amp-story-page>)
-        }</amp-story>:<div>invalid amp</div>
+        }</amp-story>
     </>
 
   )
