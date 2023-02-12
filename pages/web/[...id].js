@@ -41,12 +41,13 @@ function About(props) {
  
        
         {WebStoriesDetails.map((i) =>
-         <amp-story
-          standalone
-          publisher=""
-          title="Times Ascent"
-          publisher-logo-src="https://timesascent.com/newimages/main/times_ascent_logo.svg"
-          poster-portrait-src="https://timesascent.com/newimages/main/times_ascent_logo.svg"> 
+        <amp-story
+        standalone
+        title="Hello Story"
+        publisher="The AMP Team"
+        publisher-logo-src="https://example.com/logo/1x1.png"
+        poster-portrait-src="https://example.com/my-story/poster/3x4.jpg"
+      > 
           <amp-story-page id="dfd" auto-advance-after="5s"> 
               <amp-story-grid-layer aspect-ratio="9:16" template="vertical">
                 <amp-img
