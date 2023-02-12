@@ -58,9 +58,7 @@ function About(props) {
               alt="a cool image"
               layout="responsive"
             /></amp-story-grid-layer> </amp-story-page></amp-story>)
-        }: (
-      <img width="300" height="300" src="https://plus.unsplash.com/premium_photo-1661962548081-071712b709ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=2000&q=60" alt="a cool image" />
-      )
+        }:<></>
     </>
 
   )
