@@ -35,30 +35,31 @@ function About(props) {
 
 
 
-    </Head> 
+    </Head>
 
-        isAmp ? (
-          <div>
+      isAmp ? (
+      <div>
         <h3>My AMP About Page!</h3>
-         { WebStoriesDetails.map((i) => <amp-story
-            standalone={false}
-            publisher=""
-            title="Times Ascent"
-            publisher-logo-src="https://timesascent.com/newimages/main/times_ascent_logo.svg"
-            poster-portrait-src="https://timesascent.com/newimages/main/times_ascent_logo.svg"> <amp-story-page id="dfd" auto-advance-after="5s">     <amp-story-grid-layer
-              
-            ><amp-img
-                className="ampimg"
-                width="300"
-                height="300"
-                src={i.DImage}
-                alt="a cool image"
-                layout="responsive"
-              /></amp-story-grid-layer> </amp-story-page></amp-story> )
-         }</div>: (
-          <img width="300" height="300" src="https://plus.unsplash.com/premium_photo-1661962548081-071712b709ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=2000&q=60" alt="a cool image" />
-        )
-     </>
+        {WebStoriesDetails.map((i) => <amp-story
+          standalone={false}
+          publisher=""
+          title="Times Ascent"
+          publisher-logo-src="https://timesascent.com/newimages/main/times_ascent_logo.svg"
+          poster-portrait-src="https://timesascent.com/newimages/main/times_ascent_logo.svg"> 
+          <amp-story-page id="dfd" auto-advance-after="5s"> 
+              <amp-story-grid-layer aspect-ratio="9:16" template="vertical">
+                <amp-img
+              className="ampimg"
+              width="300"
+              height="300"
+              src={i.DImage}
+              alt="a cool image"
+              layout="responsive"
+            /></amp-story-grid-layer> </amp-story-page></amp-story>)
+        }</div>: (
+      <img width="300" height="300" src="https://plus.unsplash.com/premium_photo-1661962548081-071712b709ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=2000&q=60" alt="a cool image" />
+      )
+    </>
 
   )
 }
