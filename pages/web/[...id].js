@@ -37,7 +37,7 @@ function About(props) {
 
     </Head>
 
-      isAmp ? (
+   
  
        
         {WebStoriesDetails.map((i) =>
@@ -58,7 +58,7 @@ function About(props) {
               alt="a cool image"
               layout="responsive"
             /></amp-story-grid-layer> </amp-story-page></amp-story>)
-        }:<></>
+        }
     </>
 
   )
