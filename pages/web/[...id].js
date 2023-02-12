@@ -42,7 +42,7 @@ function About(props) {
        
         {WebStoriesDetails.map((i) =>
          <amp-story
-          standalone
+         
           publisher=""
           title="Times Ascent"
           publisher-logo-src="https://timesascent.com/newimages/main/times_ascent_logo.svg"
