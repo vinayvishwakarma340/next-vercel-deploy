@@ -42,7 +42,7 @@ function About(props) {
        
         {WebStoriesDetails.map((i) =>
         <amp-story
-        standalone
+        standalone=""
         title="Hello Story"
         publisher="The AMP Team"
         publisher-logo-src="https://example.com/logo/1x1.png"
