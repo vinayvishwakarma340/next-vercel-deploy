@@ -61,28 +61,32 @@ function About(props) {
             </amp-story-grid-layer>
 
             <amp-story-grid-layer template="vertical">
-              <div className="writer">
+              {/* <div className="writer">
                 <span className="logo-thumb blkBg">
                   <amp-img
                     className="writer-img"
                     data-hero=""
-                    src="https://timesascent.com/newimages/main/times_ascent_logo.svg"
-                    width="140"
-                    height="20"
+                    src="https://timesascent.com/Times_Ascent_Icon.png"
+                    width="40"
+                    height="40"
                     alt="herzindagi logo"
                     layout="fixed"
                   />
                 </span>
+              </div> */}
+              <div className="text-container">
+                {item.TitleType && (
+                  <h1 className="first-heading">
+                    {item.TitleType.toUpperCase()}
+                  </h1>
+                )}
+                {item.DescriptionType && (
+                  <p className="desct">{item.DescriptionType}</p>
+                )}
+                {item.headtext && (
+                  <h2 className="second-heading">{item.headtext}</h2>
+                )}
               </div>
-              {item.TitleType && (
-                <h1 className="first-heading">
-                  a{item.TitleType.toUpperCase()}
-                </h1>
-              )}
-              {item.DescriptionType && (
-                <p className="desct">{item.DescriptionType}</p>
-              )}
-              {item.headtext && <h2 className="heading">{item.headtext}</h2>}
               {item.url && (
                 <span className="btnnew">
                   <a
@@ -101,9 +105,31 @@ function About(props) {
         ))}
       </amp-story>
       <style jsx>{`
+        amp-story {
+          font-family: "Helvetica", "Arial", "sans-serif";
+        }
+        .text-container {
+          background: rgba(00, 00, 00, 0.3);
+          padding: 10px;
+          border-radius: 7px;
+          backdrop-filter: blur(10px);
+          font-size: 22px;
+          color: #fff;
+        }
         .first-heading {
-          font-size: 30px;
-          color: yellow;
+          font-size: 18px;
+          line-height: 20px;
+          margin-bottom: 10px;
+        }
+        .second-heading {
+          font-size: 18px;
+          line-height: 20px;
+          margin-bottom: 10px;
+        }
+        .desct {
+          font-size: 16px;
+          line-height: 20px;
+          margin-bottom: 10px;
         }
       `}</style>
     </>
