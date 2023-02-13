@@ -91,12 +91,12 @@ ga('send', 'pageview');`,
           src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"
         />
 
-        <Link
+        {/* <Link
           rel="dns-prefetch"
           as="script"
           crossOrigin="anonymous"
           href="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4938307593495390"
-        />
+        /> */}
 
      
       </Head>
