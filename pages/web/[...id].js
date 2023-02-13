@@ -40,16 +40,6 @@ function About(props) {
         />
 
         <link rel="canonical" href="/dfg" />
-        <style
-          amp-custom=""
-          dangerouslySetInnerHTML={{
-            __html: `
-          amp-img {
-            border: 1px solid black;
-          }
-        `,
-          }}
-        />
       </Head>
       <amp-story
         standalone=""
