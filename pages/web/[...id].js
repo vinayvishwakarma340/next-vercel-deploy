@@ -67,6 +67,13 @@ function About(props) {
           amp-story-grid-layer.bottom {
             align-content: end;
           }
+          amp-story-grid-layer .writer {
+            transform: translate(-15px, -45px);
+          }
+          amp-story-grid-layer .writer-img {
+            width: 120px;
+            height: 40px;
+          }
           amp-story-grid-layer.noedge {
             padding: 0px;
           }
@@ -135,17 +142,51 @@ function About(props) {
         publisher-logo-src="https://example.com/logo/1x1.png"
         poster-portrait-src="https://example.com/my-story/poster/3x4.jpg"
       >
-        {WebStoriesDetails.map((i) => (
-          <amp-story-page id="dfd" auto-advance-after="5s">
+        {WebStoriesDetails.map((item, index) => (
+          <amp-story-page key={index} id="dfd" auto-advance-after="5s">
             <amp-story-grid-layer template="fill">
               <amp-img
                 className="ampimg"
                 width="720"
                 height="1280"
                 layout="responsive"
-                src={i.DImage}
+                src={item.DImage}
                 alt="a cool image"
               />
+            </amp-story-grid-layer>
+
+            <amp-story-grid-layer template="vertical">
+              <div class="writer">
+                <span class="logo-thumb blkBg">
+                  <amp-img
+                    className="writer-img"
+                    data-hero=""
+                    src="https://timesascent.com/newimages/main/times_ascent_logo.svg"
+                    width="140"
+                    height="20"
+                    alt="herzindagi logo"
+                    layout="fixed"
+                  />
+                </span>
+              </div>
+
+              <h1 class="desct1">{item.TitleType.toUpperCase()}</h1>
+
+              <p class="desct">{item.DescriptionType}</p>
+
+              <h2 class="heading">{item.headtext}</h2>
+
+              <span class="btnnew">
+                <a
+                  href={item.url}
+                  tabindex="0"
+                  class="btnnewa"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Click Here
+                </a>
+              </span>
             </amp-story-grid-layer>
           </amp-story-page>
         ))}
