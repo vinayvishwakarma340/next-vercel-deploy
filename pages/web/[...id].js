@@ -1,5 +1,4 @@
 import { webStoriesDetailApi } from "../api/webStoriesApi";
-
 import { useAmp } from "next/amp";
 import Head from "next/head";
 export const config = { amp: true };
@@ -101,6 +100,12 @@ function About(props) {
           </amp-story-page>
         ))}
       </amp-story>
+      <style jsx>{`
+        .first-heading {
+          font-size: 30px;
+          color: yellow;
+        }
+      `}</style>
     </>
   );
 }
