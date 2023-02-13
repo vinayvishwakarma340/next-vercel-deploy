@@ -10,18 +10,54 @@ function About(props) {
   return (
     <>
       <Head>
+        <title>
+          Ascent Jobs, Vacancies, Recruitment, Employment - timesascent.com
+        </title>
+        <meta
+          name="description"
+          content="Times Ascent, a part of The Times of India, is focused on career enhancement, jobs, upskill courses, latest events, trending news, remote work, human resource, free resume maker, psychometric tests, interview tips- timesascent.com"
+        />
+        <link rel="canonical" href="https://timesascent.com/allwebstories" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="https://timesascent.com/Times_Ascent_Icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="https://timesascent.com/Times_Ascent_Icon.png"
+        />
+        <meta
+          property="twitter:image"
+          content="https://timesascent.com/Times_Ascent_Icon.png"
+        />
+        <meta
+          property="twitter:title"
+          content="Ascent Jobs, Vacancies, Recruitment, Employment - timesascent.com"
+        />
+        <meta
+          property="twitter:description"
+          content="Times Ascent, a part of The Times of India, is focused on career enhancement, jobs, upskill courses, latest events, trending news, remote work, human resource, free resume maker, psychometric tests, interview tips- timesascent.com"
+        />
+        <meta property="twitter:card" content="summary" />
+        <meta
+          property="twitter:site"
+          content="https://twitter.com/@timesascent"
+        />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+
         <script async src="https://cdn.ampproject.org/v0.js"></script>
         <script
           async
           custom-element="amp-analytics"
           src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
         ></script>
-
-        <link rel="icon" href="/Times_Ascent_Icon.png" />
-
-        <title>klkl</title>
-
-        <link rel="icon" href="/public/Times_Ascent_Icon.png" />
 
         <script
           async
@@ -37,8 +73,6 @@ function About(props) {
           rel="dns-prefetch"
           href="https://www.google-analytics.com/analytics.js"
         />
-
-        <link rel="canonical" href="/dfg" />
       </Head>
       <amp-story
         standalone=""
