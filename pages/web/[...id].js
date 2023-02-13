@@ -41,6 +41,16 @@ function About(props) {
 
         <link rel="canonical" href="/dfg" />
         <style
+          amp-custom=""
+          dangerouslySetInnerHTML={{
+            __html: `
+          amp-img {
+            border: 1px solid black;
+          }
+        `,
+          }}
+        ></style>
+        {/* <style
           amp-custom
           dangerouslySetInnerHTML={{
             __html: `
@@ -140,7 +150,7 @@ function About(props) {
           }
         `,
           }}
-        ></style>
+        ></style> */}
       </Head>
       <amp-story
         standalone=""
