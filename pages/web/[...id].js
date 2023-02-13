@@ -41,7 +41,6 @@ function About(props) {
 
         <link rel="canonical" href="/dfg" />
         <style
-          amp-custom=""
           dangerouslySetInnerHTML={{
             __html: `
             amp-story {
@@ -51,12 +50,13 @@ function About(props) {
           amp-story-page {
             background-color: #000;
           }
-          h1 {
+         
+          h1.first-heading {
             font-weight: bold;
             font-size: 10px;
             font-weight: normal;
             line-height: 1.174;
-            color: "green";
+           
           }
           p {
             font-weight: normal;
@@ -175,20 +175,28 @@ function About(props) {
                   />
                 </span>
               </div>
-              <h1 className="">{item.TitleType.toUpperCase()}</h1>
-              <p className="desct">{item.DescriptionType}</p>
-              <h2 className="heading">{item.headtext}</h2>
-              <span className="btnnew">
-                <a
-                  href={item.url}
-                  tabindex="0"
-                  className="btnnewa"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Click Here
-                </a>
-              </span>
+              {item.TitleType && (
+                <h1 className="first-heading">
+                  a{item.TitleType.toUpperCase()}
+                </h1>
+              )}
+              {item.DescriptionType && (
+                <p className="desct">{item.DescriptionType}</p>
+              )}
+              {item.headtext && <h2 className="heading">{item.headtext}</h2>}
+              {item.url && (
+                <span className="btnnew">
+                  <a
+                    href={item.url}
+                    tabindex="0"
+                    className="btnnewa"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Click Here
+                  </a>
+                </span>
+              )}
             </amp-story-grid-layer>
           </amp-story-page>
         ))}
