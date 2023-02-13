@@ -41,6 +41,7 @@ function About(props) {
 
         <link rel="canonical" href="/dfg" />
         <style
+          amp-custom
           dangerouslySetInnerHTML={{
             __html: `
             amp-story {
