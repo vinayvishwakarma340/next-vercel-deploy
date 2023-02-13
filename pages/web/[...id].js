@@ -52,7 +52,7 @@ function About(props) {
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
 
-        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <script async src="https://cdn.ampproject.org/v0.js"></script> 
         <script
           async
           custom-element="amp-analytics"
@@ -95,19 +95,7 @@ function About(props) {
             </amp-story-grid-layer>
 
             <amp-story-grid-layer template="vertical">
-              {/* <div className="writer">
-                <span className="logo-thumb blkBg">
-                  <amp-img
-                    className="writer-img"
-                    data-hero=""
-                    src="https://timesascent.com/Times_Ascent_Icon.png"
-                    width="40"
-                    height="40"
-                    alt="herzindagi logo"
-                    layout="fixed"
-                  />
-                </span>
-              </div> */}
+            
               <div className="text-container">
                 {item.TitleType && (
                   <h1 className="first-heading">
