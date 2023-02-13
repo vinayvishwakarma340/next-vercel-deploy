@@ -40,8 +40,11 @@ function About(props) {
         />
 
         <link rel="canonical" href="/dfg" />
-        <style jsx>{`
-          amp-story {
+        <style
+          amp-custom=""
+          dangerouslySetInnerHTML={{
+            __html: `
+            amp-story {
             font-family: "Oswald", sans-serif;
             color: #fff;
           }
@@ -50,9 +53,10 @@ function About(props) {
           }
           h1 {
             font-weight: bold;
-            font-size: 2.875em;
+            font-size: 10px;
             font-weight: normal;
             line-height: 1.174;
+            color: "green";
           }
           p {
             font-weight: normal;
@@ -133,7 +137,9 @@ function About(props) {
           .btnnewa:hover {
             color: #ffff;
           }
-        `}</style>
+        `,
+          }}
+        ></style>
       </Head>
       <amp-story
         standalone=""
@@ -156,8 +162,8 @@ function About(props) {
             </amp-story-grid-layer>
 
             <amp-story-grid-layer template="vertical">
-              <div class="writer">
-                <span class="logo-thumb blkBg">
+              <div className="writer">
+                <span className="logo-thumb blkBg">
                   <amp-img
                     className="writer-img"
                     data-hero=""
@@ -169,18 +175,14 @@ function About(props) {
                   />
                 </span>
               </div>
-
-              <h1 class="desct1">{item.TitleType.toUpperCase()}</h1>
-
-              <p class="desct">{item.DescriptionType}</p>
-
-              <h2 class="heading">{item.headtext}</h2>
-
-              <span class="btnnew">
+              <h1 className="">{item.TitleType.toUpperCase()}</h1>
+              <p className="desct">{item.DescriptionType}</p>
+              <h2 className="heading">{item.headtext}</h2>
+              <span className="btnnew">
                 <a
                   href={item.url}
                   tabindex="0"
-                  class="btnnewa"
+                  className="btnnewa"
                   target="_blank"
                   rel="noreferrer"
                 >

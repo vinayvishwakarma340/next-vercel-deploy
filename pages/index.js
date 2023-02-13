@@ -1,18 +1,16 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 
 const index = () => {
-  useEffect(()=>{
-    callMe()
-  },[])
+  useEffect(() => {
+    callMe();
+  }, []);
 
-  const callMe = async() =>{
+  const callMe = async () => {
     const res = await fetch("/api/hello");
-    const data = await res.json()
-console.log(data,"ererererer-----")
-  }
-  return (
-    <div>my name is vinay</div>
-  )
-}
+    const data = await res.json();
+    console.log(data, "ererererer-----");
+  };
+  return <h1 className="text-3xl font-bold text-red-500">Hello world!</h1>;
+};
 
-export default index
+export default index;
