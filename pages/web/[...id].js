@@ -10,7 +10,6 @@ function About(props) {
 
   return (
     <>
-      {" "}
       <Head>
         <script async src="https://cdn.ampproject.org/v0.js"></script>
         <script
@@ -35,12 +34,99 @@ function About(props) {
           custom-element="amp-story"
           src="https://cdn.ampproject.org/v0/amp-story-1.0.js"
         ></script>
-        {/* <link
-        rel="dns-prefetch"
-        href="https://www.google-analytics.com/analytics.js"
-      /> */}
+        <link
+          rel="dns-prefetch"
+          href="https://www.google-analytics.com/analytics.js"
+        />
 
         <link rel="canonical" href="/dfg" />
+        <style jsx>{`
+          amp-story {
+            font-family: "Oswald", sans-serif;
+            color: #fff;
+          }
+          amp-story-page {
+            background-color: #000;
+          }
+          h1 {
+            font-weight: bold;
+            font-size: 2.875em;
+            font-weight: normal;
+            line-height: 1.174;
+          }
+          p {
+            font-weight: normal;
+            font-size: 1.3em;
+            line-height: 1.5em;
+            color: #fff;
+          }
+          q {
+            font-weight: 300;
+            font-size: 1.1em;
+          }
+          amp-story-grid-layer.bottom {
+            align-content: end;
+          }
+          amp-story-grid-layer.noedge {
+            padding: 0px;
+          }
+          amp-story-grid-layer.center-text {
+            align-content: center;
+          }
+
+          .Header {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 85%;
+          }
+          .loader {
+            margin: 20px auto;
+            display: block;
+            text-align: center;
+          }
+
+          .desct1 {
+            background: rgba(00, 00, 00, 0.5);
+            padding: 10px;
+
+            font-size: 22px;
+            color: #fff;
+          }
+          .desct {
+            background: rgba(00, 00, 00, 0.5);
+            padding: 10px;
+            color: #fff;
+          }
+
+          .heading {
+            background: rgba(00, 00, 00, 0.5);
+            padding: 10px;
+            color: #fff;
+          }
+
+          .btnnew {
+            background: #f02f39;
+            border: 0;
+            border-radius: 5px;
+            max-width: 150px;
+            padding: 12px 10px;
+            font-size: 15px;
+            margin: 0 auto;
+            margin-top: 220px;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+          }
+          .btnnewa {
+            text-decoration: none;
+            color: #ffff;
+          }
+          .btnnewa:hover {
+            color: #ffff;
+          }
+        `}</style>
       </Head>
       <amp-story
         standalone=""
@@ -51,16 +137,16 @@ function About(props) {
       >
         {WebStoriesDetails.map((i) => (
           <amp-story-page id="dfd" auto-advance-after="5s">
-            <amp-story-grid-layer aspect-ratio="9:16" template="vertical">
+            <amp-story-grid-layer template="fill">
               <amp-img
                 className="ampimg"
-                width="300"
-                height="300"
+                width="720"
+                height="1280"
+                layout="responsive"
                 src={i.DImage}
                 alt="a cool image"
-                layout="responsive"
               />
-            </amp-story-grid-layer>{" "}
+            </amp-story-grid-layer>
           </amp-story-page>
         ))}
       </amp-story>
