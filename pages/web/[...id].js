@@ -1,9 +1,11 @@
+import { useRouter } from "next/router";
 import { webStoriesDetailApi } from "../api/webStoriesApi";
 // import { useAmp } from "next/amp";
 import Head from "next/head";
 export const config = { amp: true };
 
 function stories(props) {
+  const router = useRouter()
   const WebStoriesDetails = props.WebStoryDetailListdata.WebStoriesDetails;
   // const isAmp = useAmp();
   return (
@@ -14,7 +16,7 @@ function stories(props) {
           name="description"
           content={WebStoriesDetails[0].DescriptionType}
         />
-        <link rel="canonical" href="https://timesascent.com/allwebstories" />
+        <link rel="canonical" href={`https://next-vercel-deploy-ax6zwxnta-vinayvishwakarma340.vercel.app${router.asPath}`} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
           rel="icon"
@@ -189,7 +191,7 @@ function stories(props) {
 }
 export async function getServerSideProps(context) {
   const WebStoryDetailListdata = await webStoriesDetailApi({
-    WebStoriesSummaryID: context.query.webId[1],
+    WebStoriesSummaryID: context.query.id[1],
   });
 
   return {
