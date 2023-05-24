@@ -1,21 +1,18 @@
 import { webStoriesDetailApi } from "../api/webStoriesApi";
-import { useAmp } from "next/amp";
+// import { useAmp } from "next/amp";
 import Head from "next/head";
 export const config = { amp: true };
 
-function About(props) {
+function stories(props) {
   const WebStoriesDetails = props.WebStoryDetailListdata.WebStoriesDetails;
-  const isAmp = useAmp();
-
+  // const isAmp = useAmp();
   return (
     <>
       <Head>
-        <title>
-          Ascent Jobs, Vacancies, Recruitment, Employment - timesascent.com
-        </title>
+        <title>{WebStoriesDetails[0].TitleType}</title>
         <meta
           name="description"
-          content="Times Ascent, a part of The Times of India, is focused on career enhancement, jobs, upskill courses, latest events, trending news, remote work, human resource, free resume maker, psychometric tests, interview tips- timesascent.com"
+          content={WebStoriesDetails[0].DescriptionType}
         />
         <link rel="canonical" href="https://timesascent.com/allwebstories" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -37,11 +34,11 @@ function About(props) {
         />
         <meta
           property="twitter:title"
-          content="Ascent Jobs, Vacancies, Recruitment, Employment - timesascent.com"
+          content={WebStoriesDetails[0].TitleType}
         />
         <meta
           property="twitter:description"
-          content="Times Ascent, a part of The Times of India, is focused on career enhancement, jobs, upskill courses, latest events, trending news, remote work, human resource, free resume maker, psychometric tests, interview tips- timesascent.com"
+          content={WebStoriesDetails[0].DescriptionType}
         />
         <meta property="twitter:card" content="summary" />
         <meta
@@ -52,7 +49,7 @@ function About(props) {
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
 
-        <script async src="https://cdn.ampproject.org/v0.js"></script> 
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
         <script
           async
           custom-element="amp-analytics"
@@ -95,12 +92,22 @@ function About(props) {
             </amp-story-grid-layer>
 
             <amp-story-grid-layer template="vertical">
-            
+              {/* <div className="writer">
+                <span className="logo-thumb blkBg">
+                  <amp-img
+                    className="writer-img"
+                    data-hero=""
+                    src="https://timesascent.com/Times_Ascent_Icon.png"
+                    width="40"
+                    height="40"
+                    alt="herzindagi logo"
+                    layout="fixed"
+                  />
+                </span>
+              </div> */}
               <div className="text-container">
                 {item.TitleType && (
-                  <h1 className="first-heading">
-                    {item.TitleType.toUpperCase()}
-                  </h1>
+                  <h1 className="first-heading">{item.TitleType}</h1>
                 )}
                 {item.DescriptionType && (
                   <p className="desct">{item.DescriptionType}</p>
@@ -128,13 +135,13 @@ function About(props) {
       </amp-story>
       <style jsx>{`
         amp-story {
-          font-family: "Helvetica", "Arial", "sans-serif";
+          font-family: "Roboto", "Arial", "sans-serif";
         }
         .text-container {
-          background: rgba(00, 00, 00, 0.3);
+          background: rgba(00, 00, 00, 0.6);
           padding: 10px;
           border-radius: 7px;
-          backdrop-filter: blur(10px);
+          backdrop-filter: blur(40px);
           font-size: 22px;
           color: #fff;
         }
@@ -145,13 +152,36 @@ function About(props) {
         }
         .second-heading {
           font-size: 18px;
-          line-height: 20px;
+          line-height: 22px;
           margin-bottom: 10px;
+          font-weight: 400
         }
         .desct {
           font-size: 16px;
-          line-height: 20px;
+          line-height: 22px;
+          font-weight: 400
           margin-bottom: 10px;
+        }
+        .btnnew {
+          background: #f02f39;
+          border: 0;
+          border-radius: 5px;
+          max-width: 150px;
+          padding: 12px 10px;
+          font-size: 15px;
+          margin: 0 auto;
+          margin-top: 220px;
+          color: white;
+          text-transform: uppercase;
+          text-align: center;
+          cursor: pointer;
+        }
+        .btnnewa {
+          text-decoration: none;
+          color: #ffff;
+        }
+        .btnnewa:hover {
+          color: #ffff;
         }
       `}</style>
     </>
@@ -159,11 +189,11 @@ function About(props) {
 }
 export async function getServerSideProps(context) {
   const WebStoryDetailListdata = await webStoriesDetailApi({
-    WebStoriesSummaryID: context.query.id[1],
+    WebStoriesSummaryID: context.query.webId[1],
   });
 
   return {
     props: { WebStoryDetailListdata },
   };
 }
-export default About;
+export default stories;
