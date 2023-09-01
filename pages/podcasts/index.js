@@ -13,7 +13,7 @@ import SkeletonHrec from "../../Components/Skeleton/SkeletonHrec";
 import Pagination from "../../Components/NewPagination";
 import PodcastCard from "../../Components/CardUI/PodcastCard";
 import FreelancerWidget from "../../Components/Widget/FreelancerWidget";
-import { podcastResponse } from "../api/PodcastApi";
+import { podcastResponse } from "../api/podcastApi";
 // import podcastData from "./podcastData.json";
 
 const corporatesCare = ({ props }) => {
