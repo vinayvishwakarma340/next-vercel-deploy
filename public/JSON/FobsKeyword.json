@@ -1,0 +1,43 @@
+{
+  "status_code": 200,
+  "status": "SUCCESS",
+  "data": [
+    {
+      "id": 1.0,
+      "name": " DESIGN ENGINEERING (HYDROCARBON)- Material Specialist",
+      "Type": "Designation"
+    },
+    {
+      "id": 2.0,
+      "name": "General - Managers-Taxation ",
+      "Type": "Level"
+    },
+    { "id": 3.0, "name": "Kernel Userland Engineers", "Type": "Designation" },
+    {
+      "id": 4.0,
+      "name": "Maintenance Foremen - Mechanical",
+      "Type": "Industry"
+    },
+    { "id": 5.0, "name": "Sales Professionals ", "Type": "Designation" },
+    { "id": 6.0, "name": "R & D Chemist", "Type": "Designation" },
+    { "id": 7.0, "name": "SQA Executive ", "Type": "Designation" },
+    {
+      "id": 8.0,
+      "name": "  24x7 Production Support Manager ",
+      "Type": "Company"
+    },
+    { "id": 9.0, "name": "  Asst. Professor ", "Type": "Designation" },
+    {
+      "id": 10.0,
+      "name": "  ASTT. MANAGER/MANAGER (- BD-CIVIL ) ",
+      "Type": "Level"
+    },
+    { "id": 11.0, "name": "  BILLING ENGINEER ", "Type": "Designation" },
+    { "id": 12.0, "name": "  Bodyshop Managers", "Type": "Designation" },
+    {
+      "id": 13.0,
+      "name": "  Chairman & Managing Director, (CMD)",
+      "Type": "Designation"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+export const podcastResponse = async (body) => {
+  var myHeaders = new Headers();
+  myHeaders.append(
+    "Authorization",
+    process.env.API_TOKEN_AUTH_SERVER
+  );
+
+  myHeaders.append("Content-Type", "application/json");
+
+  var raw = JSON.stringify(body);
+
+  var requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
+  // Using a fetch here but could be any async operation to an external source
+  const response = await fetch(
+    `${process.env.Live_API_URL}/v1/admin1_1/PodcastGetFrontEndList`,
+    requestOptions
+  );
+  if (!response.ok) {
+  }
+  try {
+    const jsonData = await response.json();
+    return jsonData;
+  } catch (error) {
+    console.error(error); // you may also
+  }
+};
+
+
+export const podcastDetailResponse = async (body) => {
+  var myHeaders = new Headers();
+  myHeaders.append(
+    "Authorization",
+    process.env.API_TOKEN_AUTH_SERVER
+  );
+
+  myHeaders.append("Content-Type", "application/json");
+
+  var raw = JSON.stringify(body);
+
+  var requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
+  // Using a fetch here but could be any async operation to an external source
+  const response = await fetch(
+    `${process.env.Live_API_URL}/v1/admin1_1/PodcastGetFrontEndGetById`,
+    requestOptions
+  );
+  if (!response.ok) {
+  }
+  try {
+    const jsonData = await response.json();
+    return jsonData;
+  } catch (error) {
+    console.error(error); // you may also
+  }
+};

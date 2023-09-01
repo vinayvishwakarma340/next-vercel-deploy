@@ -1,0 +1,12 @@
+[
+  { "name": "Latest Jobs", "total": 895537, "url": "/latest-jobs" },
+  { "name": "Wednesday Jobs", "total": 490591, "url": "/wednesday-jobs" },
+  { "name": "Global Jobs", "total": 255006, "url": "/global-placement-jobs" },
+  { "name": "Partner Jobs", "total": 52549, "url": "/partner-jobs" },
+  { "name": "Government Jobs", "total": 30303, "url": "/government-jobs" },
+  { "name": "CXO Jobs", "total": 10946, "url": "/cxo-jobs" },
+  { "name": "Trending Jobs", "total": 5781, "url": "/trending-jobs" },
+  { "name": "Jobs this week", "total": 474, "url": "/jobsthisweek" },
+  { "name": "Freshers/Start-up Jobs", "total": 474, "url": "/fresher-jobs" },
+  { "name": "Technological Jobs", "total": 474, "url": "/tech-jobs" }
+]

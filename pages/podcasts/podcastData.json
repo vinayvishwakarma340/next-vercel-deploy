@@ -1,0 +1,75 @@
+[
+  {
+    "id": 12,
+    "title": "Three Techies Banter (#3TB)",
+    "image": "/podcasts/threeTechiesbanter.webp",
+    "iframeUrl": "https://omny.fm/shows/3-techies-banter-3tb/playlists/podcast",
+    "url": "https://www.omnycontent.com/d/playlist/4bb33704-615b-4054-aae9-ace500fd4197/daeea5e9-9f88-4f9e-b527-adfa0088c647/490a4877-d290-44f9-a6f7-adfa008974de/podcast.rss"
+  },
+  {
+    "id": 8,
+    "title": "So, What's Next?",
+    "iframeUrl": "https://omny.fm/shows/so-what-s-next/playlists/podcast",
+    "image": "/podcasts/SoWhatsnext.webp",
+    "url": "https://www.omnycontent.com/d/playlist/4bb33704-615b-4054-aae9-ace500fd4197/991ab5de-d2ac-4568-a4b4-af7e00940af8/5ffa20fd-04a7-42e3-8910-af7e00960755/podcast.rss"
+  },
+  {
+    "id": 14,
+    "title": "Speakeasy with Dheeraj Sinha",
+    "image": "/podcasts/Speakeasy.webp",
+    "iframeUrl": "https://omny.fm/shows/speakeasy-with-dheeraj-sinha/playlists/podcast",
+    "url": "https://www.omnycontent.com/d/playlist/4bb33704-615b-4054-aae9-ace500fd4197/b6f64470-35fa-4997-9336-ae4a00894db8/e491a5d3-84cb-4052-bb74-ae4a00894df5/podcast.rss"
+  },
+  {
+    "id": 5,
+    "title": "The Startup Operator",
+    "image": "/podcasts/TheStartupOperator.webp",
+    "iframeUrl": "https://omny.fm/shows/the-startup-operator/playlists/podcast",
+    "url": "https://www.omnycontent.com/d/playlist/4bb33704-615b-4054-aae9-ace500fd4197/587635c5-7733-4198-8b60-ae9800538025/516c5d28-326e-45bf-a9e3-ae980053804a/podcast.rss"
+  },
+  {
+    "id": 1,
+    "title": "The Big Story",
+    "image": "/podcasts/TheBigStory.webp",
+    "iframeUrl": "https://omny.fm/shows/the-big-story/playlists/podcast",
+    "url": "https://www.omnycontent.com/d/playlist/4bb33704-615b-4054-aae9-ace500fd4197/badb6c1f-7cc3-430b-b497-ae9f00c159d3/190020e0-ce42-41d0-bd85-ae9f00c159e1/podcast.rss"
+  },
+  {
+    "id": 3,
+    "title": "Buy Hold Sell",
+    "image": "/podcasts/BuyHoldSell.webp",
+    "iframeUrl": "https://omny.fm/shows/buy-hold-sell/playlists/podcast",
+    "url": "https://www.omnycontent.com/d/playlist/4bb33704-615b-4054-aae9-ace500fd4197/ce0716b0-2516-4925-ab22-af8800ec3a47/b6132891-532b-4373-bd9b-af8800ec3a51/podcast.rss"
+  },
+
+  {
+    "id": 9,
+    "title": "The Digital Diary of Nikita Abhanave",
+    "iframeUrl": "https://omny.fm/shows/the-digital-diary-nikita-abhanave/playlists/podcast",
+    "image": "/podcasts/ThedigitalDiary.webp",
+    "url": "https://www.omnycontent.com/d/playlist/4bb33704-615b-4054-aae9-ace500fd4197/5b12e8f3-9bd9-40af-a378-afb6006a8d36/5e509534-e51a-4b15-96a2-afb6006b81ad/podcast.rss"
+  },
+  {
+    "id": 10,
+    "title": "Deliberate Talks",
+    "image": "/podcasts/DeliberateTalks.webp",
+    "iframeUrl": "https://omny.fm/shows/deliberate-talks/playlists/podcast",
+    "url": "https://www.omnycontent.com/d/playlist/4bb33704-615b-4054-aae9-ace500fd4197/f7735b00-9cbd-4ece-ab44-ace70056c823/714410d0-4fb3-4c73-9cc9-ace70056c82c/podcast.rss"
+  },
+
+  {
+    "id": 13,
+    "title": "Startup Launcher",
+    "image": "/podcasts/StartupLauncher.webp",
+    "iframeUrl": "https://omny.fm/shows/startup-launcher/playlists/podcast",
+    "url": "https://www.omnycontent.com/d/playlist/4bb33704-615b-4054-aae9-ace500fd4197/9b1e1af6-7bc1-431b-a876-af9400adcd03/691ac85d-cfae-4997-b360-af9400ae29fd/podcast.rss"
+  },
+
+  {
+    "id": 15,
+    "title": "The Chinwag Collective",
+    "image": "/podcasts/TheChinwag.webp",
+    "iframeUrl": "https://omny.fm/shows/the-chinwag-collective/playlists/podcast",
+    "url": "https://www.omnycontent.com/d/playlist/4bb33704-615b-4054-aae9-ace500fd4197/fd108f7a-2464-48fb-8cfd-ae4c0090b723/ab8350a6-1641-41de-9cba-ae4c0095fde4/podcast.rss"
+  }
+]

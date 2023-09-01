@@ -3,7 +3,7 @@ export const webStoriesResponse = async (pageName) => {
   var myHeaders = new Headers();
   myHeaders.append(
     "Authorization",
-    "Token 77927b69bb144b065ca11bf2a9d452819cd852db"
+    process.env.API_TOKEN_AUTH_SERVER
   );
   // myHeaders.append(
 
@@ -20,7 +20,7 @@ export const webStoriesResponse = async (pageName) => {
 
   // Using a fetch here but could be any async operation to an external source
   const response = await fetch(
-    "https://api.timesascent.com/v1/api/apiTimes/GetWebStoriesSummary",
+    `${process.env.Live_API_URL}/v1/api/apiTimes/GetWebStoriesSummary`,
     requestOptions
   );
   if (!response.ok) {
@@ -40,7 +40,7 @@ export const webStoriesDetailApi = async (body) => {
   var myHeaders = new Headers();
   myHeaders.append(
     "Authorization",
-    "Token 77927b69bb144b065ca11bf2a9d452819cd852db"
+    process.env.API_TOKEN_AUTH_SERVER
   );
 
   myHeaders.append("Content-Type", "application/json");
@@ -53,7 +53,7 @@ export const webStoriesDetailApi = async (body) => {
   };
 
   const response = await fetch(
-    "https://api.timesascent.com/v1/api/apiTimes/WebStoriesDetails",
+    `${process.env.Live_API_URL}/v1/api/apiTimes/WebStoriesDetails`,
     requestOptions
   );
   if (!response.ok) {

@@ -1,0 +1,22 @@
+{
+  "web": {
+    "client_id": "90938563153-9rh79ok6dgasud89tr8u5800bcmsfsa0.apps.googleusercontent.com",
+    "project_id": "next-timesascent",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "redirect_uris": [
+      "http://localhost:3000/api/auth/callback/google",
+      "https://preview.timesascent.com/api/auth/callback/google",
+      "https://timesascent.com/api/auth/callback/google",
+      "http://localhost/api/auth/callback/google"
+    ],
+    "javascript_origins": [
+      "http://localhost",
+      "http://localhost:3000",
+      "https://preview.timesascent.com",
+      "https://timesascent.com"
+    ]
+  }
+}

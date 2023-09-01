@@ -1,0 +1,154 @@
+.head {
+  background-color: #fff;
+}
+
+.goTopageInput {
+  border-radius: 0;
+}
+
+.goTopageInput[type="search"] {
+  -webkit-appearance: none;
+}
+
+.head_div {
+  margin: 0 100px;
+  padding-top: 20px;
+  background-color: #fff;
+  border-bottom: 5px solid rgb(50, 123, 172);
+  margin-bottom: 20px;
+}
+
+.mainContainer {
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+}
+.button {
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  background-color: #5400c2;
+  cursor: pointer;
+}
+.buttonDisable {
+  pointer-events: none;
+  opacity: 0.5;
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  background-color: #5400c2;
+}
+
+.loadingDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.bookContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background-color: white;
+  cursor: pointer;
+}
+.arrowIcon {
+  font-size: 30px;
+  cursor: pointer;
+  height: 30px;
+}
+
+.muteIconWrapper {
+  text-align: right;
+  margin: 0 20px;
+  margin-bottom: 0;
+}
+.muteIcon {
+  cursor: pointer;
+  color: rgb(29, 29, 29);
+  height: 30px;
+}
+.muteIcon:hover {
+  color: rgb(60, 60, 60);
+}
+.goTopageInput {
+  /* padding: 5px; */
+  border: 1px solid gray;
+  outline: none;
+  border-right: none;
+  width: 110px;
+  padding: 7px;
+}
+.goTopageButton {
+  padding: 8px;
+  color: white;
+  background-color: rgb(29 29 29);
+  border: none;
+  cursor: pointer;
+}
+.goTopagebuttonDisable {
+  padding: 8px;
+  color: white;
+  background-color: rgb(29 29 29);
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.gotoPageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.iconContainerDisable {
+  opacity: 0;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .bottomButtonWrapper {
+    margin-top: 20px 0px;
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* .goTopageInput {
+    width: 100px;
+  } */
+  .bottomButtonWrapper {
+    margin-top: 0px;
+    padding-bottom: 16px;
+  }
+
+  .head_div {
+    margin: 20px;
+    background-color: #fff;
+  }
+  .head_div > h1 {
+    font-size: 18px;
+  }
+  .head_div > h6 {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .iconContainer {
+    background-color: #cfcbe2;
+    margin: 10px;
+  }
+}

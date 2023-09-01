@@ -1,0 +1,23 @@
+{
+  "status_code": 200,
+  "status": "SUCCESS",
+  "data": [
+    {
+      "ID": "26",
+      "KeyIndex": "26",
+      "DynamicWidgetID": "9051845c-1edb-11ed-929f-064df626ed42",
+      "Title": "Share Your Growth Story",
+      "Description": "Get a chance to share and feature your growth story with us",
+      "RedirectionUrl": "/professionals-growth-journey",
+      "PageName": "Movement of Professionals",
+      "IconImage": "https://api.timesascent.com/recruiterpostjob/staticGrowth.svg/2022/08/18/1660816388.svg",
+      "IsDeleted": "0",
+      "IsPublished": "1",
+      "CreatedAt": "2022-08-18T15:23:08",
+      "CreatedBy": "System",
+      "UpdatedAt": "2022-08-18T15:23:08",
+      "UpdatedBy": "System"
+    }
+  ],
+  "message": "Data found"
+}

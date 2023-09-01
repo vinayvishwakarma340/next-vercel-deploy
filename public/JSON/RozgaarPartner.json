@@ -1,0 +1,51 @@
+[
+  {
+    "keyIndex": "84",
+    "name": "Amazon",
+    "industry": "",
+    "image": "/RozgaarPartner/Amazon_logo.svg",
+    "company_id": "",
+    "baseUrl": "https://api.timesascent.com/"
+  },
+  {
+    "keyIndex": "140",
+    "name": "Digital_India",
+    "industry": "",
+    "image": "/RozgaarPartner/Digital_India.svg",
+    "company_id": "53457",
+    "baseUrl": "https://api.timesascent.com/"
+  },
+  {
+    "keyIndex": "124",
+    "name": "Hero_Insurance",
+    "industry": "",
+    "image": "/RozgaarPartner/Hero_Insurance.svg",
+    "company_id": "10967",
+    "baseUrl": "https://api.timesascent.com/"
+  },
+  {
+    "keyIndex": "198",
+    "name": "Hero",
+    "industry": "",
+    "image": "/RozgaarPartner/Hero.svg",
+    "company_id": "53927",
+    "baseUrl": "https://api.timesascent.com/"
+  },
+  {
+    "keyIndex": "201",
+    "name": "Hyundai",
+    "industry": "",
+    "image": "/RozgaarPartner/Hyundai.svg",
+    "company_id": "53124",
+    "baseUrl": "https://api.timesascent.com/"
+  },
+
+  {
+    "keyIndex": "197",
+    "name": "Times_Ascent",
+    "industry": "",
+    "image": "/RozgaarPartner/Skill_India.svg",
+    "company_id": "53877",
+    "baseUrl": "https://api.timesascent.com/"
+  }
+]

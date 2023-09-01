@@ -1,0 +1,79 @@
+.google_ads_center {
+  margin: auto;
+  display: table;
+}
+
+.top {
+  margin-top: -20px;
+}
+.google_ads_center_no_margin {
+  margin: auto;
+  display: table;
+  /* margin-bottom: 25px; */
+}
+.google_ads_center_noo_margin {
+  margin: 0;
+  display: table;
+  /* margin-bottom: 25px; */
+}
+
+@media (max-width: 768px) {
+  .google_ads_center_no_margin {
+    margin: auto;
+    display: table;
+    /* margin-bottom: 25px; */
+  }
+}
+
+/* .google_ads_margin {
+    margin-top: 25px;
+    margin-bottom: 25px;
+} */
+.google_ads_margin_top {
+  margin: auto;
+  margin-top: 20px;
+  display: table;
+}
+.google_ads_center_300_600 {
+  height: 600px;
+  width: 300px;
+}
+.google_ads_center_300_250 {
+  height: 250px;
+  width: 300px;
+}
+.google_ads_center_300_50 {
+  height: 50px;
+  width: 300px;
+}
+.google_ads_margin_top_mobile {
+  margin: 1.5rem auto;
+  display: table;
+}
+.right_comp_margin_mob {
+  background-color: white;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+.mob_comp_margin_mob {
+  /* background-color: white; */
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.mob_components_margin_bottom {
+  margin-bottom: 1.5rem;
+  margin-top: 10px;
+  text-align: center;
+}
+.right_comp_margin {
+  background-color: white;
+  margin: 2rem 0;
+}
+.adComp {
+  background: #bcb5b536;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}

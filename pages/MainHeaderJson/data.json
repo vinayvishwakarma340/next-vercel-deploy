@@ -1,0 +1,927 @@
+{
+  "Alphabet": [
+    {
+      "name": "A"
+    },
+    {
+      "name": "B"
+    },
+    {
+      "name": "C"
+    },
+    {
+      "name": "D"
+    },
+    {
+      "name": "E"
+    },
+    {
+      "name": "F"
+    },
+    {
+      "name": "G"
+    },
+    {
+      "name": "H"
+    },
+    {
+      "name": "I"
+    },
+    {
+      "name": "J"
+    },
+    {
+      "name": "K"
+    },
+    {
+      "name": "L"
+    },
+    {
+      "name": "M"
+    },
+    {
+      "name": "N"
+    },
+    {
+      "name": "O"
+    },
+    {
+      "name": "P"
+    },
+    {
+      "name": "Q"
+    },
+    {
+      "name": "R"
+    },
+    {
+      "name": "S"
+    },
+    {
+      "name": "T"
+    },
+    {
+      "name": "U"
+    },
+    {
+      "name": "V"
+    },
+    {
+      "name": "W"
+    },
+    {
+      "name": "X"
+    },
+    {
+      "name": "Y"
+    },
+    {
+      "name": "Z"
+    }
+  ],
+  "cityFilter": [
+    {
+      "keyIndex": 17696,
+      "name": "Pune",
+      "position": 36844,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 18038,
+      "name": "New Delhi",
+      "position": 36359,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 17992,
+      "name": "Gautam Buddha Nagar",
+      "position": 34129,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 17501,
+      "name": "Gurugram",
+      "position": 32210,
+      "issuedate": "2022-04-13"
+    },
+    {
+      "keyIndex": 17577,
+      "name": "Bengaluru",
+      "position": 29624,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 17993,
+      "name": "Ghaziabad",
+      "position": 27216,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 17499,
+      "name": "Faridabad",
+      "position": 24987,
+      "issuedate": "2022-04-13"
+    },
+    {
+      "keyIndex": 17463,
+      "name": "Ahmedabad",
+      "position": 23708,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 17708,
+      "name": "Thane",
+      "position": 21973,
+      "issuedate": "2022-03-16"
+    },
+    {
+      "keyIndex": 17885,
+      "name": "Hyderabad",
+      "position": 17346,
+      "issuedate": "2022-04-22"
+    },
+    {
+      "keyIndex": 18025,
+      "name": "Kolkata",
+      "position": 16462,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 17986,
+      "name": "Lucknow",
+      "position": 14711,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 17494,
+      "name": "Vadodara",
+      "position": 12060,
+      "issuedate": "2022-04-23"
+    },
+    {
+      "keyIndex": 17850,
+      "name": "Chennai",
+      "position": 12018,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 17828,
+      "name": "Jaipur",
+      "position": 8077,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 17491,
+      "name": "Surat",
+      "position": 5352,
+      "issuedate": "2022-04-15"
+    },
+    {
+      "keyIndex": 17927,
+      "name": "Dehradun",
+      "position": 4118,
+      "issuedate": "2022-04-13"
+    },
+    {
+      "keyIndex": 17995,
+      "name": "Meerut",
+      "position": 3137,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 17475,
+      "name": "Gandhinagar",
+      "position": 3087,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 17693,
+      "name": "Nashik",
+      "position": 2921,
+      "issuedate": "2022-03-05"
+    },
+    {
+      "keyIndex": 17421,
+      "name": "Patna",
+      "position": 2862,
+      "issuedate": "2022-04-12"
+    }
+  ],
+  "CityJobsLastweek": [
+    {
+      "keyIndex": 12528,
+      "name": "India",
+      "position": 64,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 11914,
+      "name": "Ahmedabad",
+      "position": 46,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 12123,
+      "name": "Vadodara",
+      "position": 45,
+      "issuedate": "2022-04-23"
+    },
+    {
+      "keyIndex": 11301,
+      "name": "Hyderabad",
+      "position": 34,
+      "issuedate": "2022-04-22"
+    },
+    {
+      "keyIndex": 13394,
+      "name": "Pune",
+      "position": 34,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 17577,
+      "name": "Bengaluru",
+      "position": 30,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 15135,
+      "name": "Lucknow",
+      "position": 25,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 11816,
+      "name": "Ghaziabad",
+      "position": 23,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 11571,
+      "name": "Aurangabad",
+      "position": 15,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 13337,
+      "name": "Mumbai",
+      "position": 12,
+      "issuedate": "2022-04-26"
+    },
+    {
+      "keyIndex": 15722,
+      "name": "Kolkata",
+      "position": 12,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 12923,
+      "name": "Bhopal",
+      "position": 11,
+      "issuedate": "2022-04-22"
+    },
+    {
+      "keyIndex": 15404,
+      "name": "Varanasi",
+      "position": 11,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 11883,
+      "name": "Goa",
+      "position": 10,
+      "issuedate": "2022-04-25"
+    },
+    {
+      "keyIndex": 17482,
+      "name": "Mehsana",
+      "position": 9,
+      "issuedate": "2022-04-26"
+    },
+    {
+      "keyIndex": 17063,
+      "name": "Bhubaneshwar",
+      "position": 9,
+      "issuedate": "2022-04-15"
+    },
+    {
+      "keyIndex": 17483,
+      "name": "Morbi",
+      "position": 8,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 12172,
+      "name": "Panipat",
+      "position": 8,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 13346,
+      "name": "Nagpur",
+      "position": 8,
+      "issuedate": "2022-04-15"
+    },
+    {
+      "keyIndex": 11844,
+      "name": "New Delhi",
+      "position": 7,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 18026,
+      "name": "Nadia",
+      "position": 7,
+      "issuedate": "2022-04-27"
+    }
+  ],
+  "companyFilter": [
+    {
+      "keyIndex": 53321,
+      "position": 6,
+      "name": "Raj Barcode Systems Pvt. Ltd. (Rajeshwari Group of Companies)",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 53322,
+      "position": 2,
+      "name": "Sabarmati Gas Ltd.",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 53325,
+      "position": 7,
+      "name": "Global Knowledge Campus (Krishnagar)",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 10890,
+      "position": 314,
+      "name": "IRCON International Limited",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 21123,
+      "position": 176,
+      "name": "Delhi Development Authority",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 1,
+      "position": 5,
+      "name": "B.M.S. College Of Engineering",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 46875,
+      "position": 31,
+      "name": "NTPC Limited.",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 53324,
+      "position": 12,
+      "name": "YMCA Seacom Heritage Court",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 51426,
+      "position": 22,
+      "name": "Maharashtra Public School",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 53323,
+      "position": 8,
+      "name": "S.D. International School",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 52776,
+      "position": 8,
+      "name": "Jagadguru Sant Tukaram Maharaj Santpith School & Jr. College",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 14629,
+      "position": 228,
+      "name": "Indian Institute of Management Ahmedabad",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 53279,
+      "position": 2,
+      "name": "Time Imaging Center, Rajkot",
+      "issueDate": "2022-04-26"
+    },
+    {
+      "keyIndex": 53313,
+      "position": 1,
+      "name": "St. Xavier's Primary School",
+      "issueDate": "2022-04-26"
+    },
+    {
+      "keyIndex": 53308,
+      "position": 8,
+      "name": "Buildquick Infrastructure Pvt. Ltd.",
+      "issueDate": "2022-04-26"
+    },
+    {
+      "keyIndex": 24169,
+      "position": 77,
+      "name": "General Insurance Corporation Of India",
+      "issueDate": "2022-04-26"
+    },
+    {
+      "keyIndex": 53312,
+      "position": 8,
+      "name": "Delhi Public School, East Ahmedabad",
+      "issueDate": "2022-04-26"
+    },
+    {
+      "keyIndex": 37275,
+      "position": 19,
+      "name": "Sanjivani Super Speciality Hospital Pvt. Ltd.",
+      "issueDate": "2022-04-26"
+    },
+    {
+      "keyIndex": 19814,
+      "position": 346,
+      "name": "Gujarat Alkalies and Chemicals Limited",
+      "issueDate": "2022-04-26"
+    },
+    {
+      "keyIndex": 53319,
+      "position": 5,
+      "name": "Prominent Academic School",
+      "issueDate": "2022-04-26"
+    },
+    {
+      "keyIndex": 40081,
+      "position": 17,
+      "name": "Delhi Public School, Mehsana",
+      "issueDate": "2022-04-26"
+    }
+  ],
+  "indusrtyJsonFilter": [
+    {
+      "keyIndex": 15875,
+      "position": 185358,
+      "name": "Educational",
+      "Sname": "Training",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 15876,
+      "position": 49481,
+      "name": "Engineering",
+      "Sname": "Energy",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 15894,
+      "position": 43048,
+      "name": "Recruitment",
+      "Sname": "Placement Agencies",
+      "issueDate": "2022-03-09"
+    },
+    {
+      "keyIndex": 15868,
+      "position": 30991,
+      "name": "Biotechnology",
+      "Sname": "Healthcare",
+      "issueDate": "2022-04-26"
+    },
+    {
+      "keyIndex": 15888,
+      "position": 24626,
+      "name": "Manufacturing",
+      "Sname": "Manufacturing",
+      "issueDate": "2022-04-20"
+    },
+    {
+      "keyIndex": 15872,
+      "position": 21844,
+      "name": "Consulting Services",
+      "Sname": "Consulting Services",
+      "issueDate": "2022-03-23"
+    },
+    {
+      "keyIndex": 15900,
+      "position": 20408,
+      "name": "Others",
+      "Sname": "Others",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 15870,
+      "position": 14844,
+      "name": "Food Services",
+      "Sname": "Hospitality",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 15871,
+      "position": 14181,
+      "name": "Construction",
+      "Sname": "Iron",
+      "issueDate": "2022-04-15"
+    },
+    {
+      "keyIndex": 15883,
+      "position": 12841,
+      "name": "IT-Software",
+      "Sname": "IT-Software",
+      "issueDate": "2022-04-19"
+    },
+    {
+      "keyIndex": 15863,
+      "position": 10705,
+      "name": "Accounting",
+      "Sname": "Stock broking",
+      "issueDate": "2022-04-22"
+    },
+    {
+      "keyIndex": 15880,
+      "position": 10079,
+      "name": "Government Sector",
+      "Sname": "Government Sector",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 15893,
+      "position": 9922,
+      "name": "Real Estate",
+      "Sname": "Real Estate",
+      "issueDate": "2022-04-20"
+    },
+    {
+      "keyIndex": 15881,
+      "position": 8694,
+      "name": "Travel",
+      "Sname": "Airlines",
+      "issueDate": "2022-04-23"
+    },
+    {
+      "keyIndex": 15891,
+      "position": 7519,
+      "name": "Petrochemicals",
+      "Sname": "Oil and Gas",
+      "issueDate": "2022-04-08"
+    },
+    {
+      "keyIndex": 15867,
+      "position": 6583,
+      "name": "Automobiles",
+      "Sname": "Automobiles",
+      "issueDate": "2022-04-20"
+    },
+    {
+      "keyIndex": 15890,
+      "position": 5345,
+      "name": "NGO",
+      "Sname": "Social Services",
+      "issueDate": "2022-03-15"
+    },
+    {
+      "keyIndex": 15877,
+      "position": 5338,
+      "name": "Entertainment",
+      "Sname": "Media",
+      "issueDate": "2022-04-06"
+    },
+    {
+      "keyIndex": 15869,
+      "position": 5168,
+      "name": "Call Centres",
+      "Sname": "ITES",
+      "issueDate": "2022-04-13"
+    },
+    {
+      "keyIndex": 15882,
+      "position": 4407,
+      "name": "IT-Hardware",
+      "Sname": "Networking",
+      "issueDate": "2022-02-02"
+    },
+    {
+      "keyIndex": 15889,
+      "position": 1564,
+      "name": "Marine",
+      "Sname": "Shipping",
+      "issueDate": "2022-04-26"
+    }
+  ],
+  "jobfunctionFilter": [
+    {
+      "keyIndex": 83,
+      "position": 128492,
+      "name": "Learning & Library",
+      "issueDate": "2022-04-20"
+    },
+    {
+      "keyIndex": 84,
+      "position": 107215,
+      "name": "Engineering, Civil and Architecture",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 69,
+      "position": 92397,
+      "name": "Office Administration",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 82,
+      "position": 34150,
+      "name": "Healthcare & Medical",
+      "issueDate": "2022-04-26"
+    },
+    {
+      "keyIndex": 76,
+      "position": 23671,
+      "name": "Sales & Business Dev",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 72,
+      "position": 22689,
+      "name": "Finance & Accounting",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 79,
+      "position": 20847,
+      "name": "Software",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 75,
+      "position": 13050,
+      "name": "Advertising",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 86,
+      "position": 11372,
+      "name": "Hospitality & Tourism",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 77,
+      "position": 11237,
+      "name": "Production and Manufacturing",
+      "issueDate": "2022-04-06"
+    },
+    {
+      "keyIndex": 78,
+      "position": 9024,
+      "name": " QA  & Testing",
+      "issueDate": "2022-04-15"
+    },
+    {
+      "keyIndex": 80,
+      "position": 7495,
+      "name": "Logistic",
+      "issueDate": "2021-11-20"
+    },
+    {
+      "keyIndex": 73,
+      "position": 6612,
+      "name": "Human Resources",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 70,
+      "position": 5910,
+      "name": "Support",
+      "issueDate": "2022-04-25"
+    },
+    {
+      "keyIndex": 74,
+      "position": 2795,
+      "name": "Law,Legal",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 71,
+      "position": 2424,
+      "name": "Banking & Insurance",
+      "issueDate": "2022-04-26"
+    },
+    {
+      "keyIndex": 88,
+      "position": 1774,
+      "name": "Journalism & Creative",
+      "issueDate": "2022-04-06"
+    },
+    {
+      "keyIndex": 81,
+      "position": 1272,
+      "name": "Aviation",
+      "issueDate": "2022-04-12"
+    },
+    {
+      "keyIndex": 91,
+      "position": 1253,
+      "name": "Intelligence",
+      "issueDate": "2022-04-27"
+    },
+    {
+      "keyIndex": 97,
+      "position": 1012,
+      "name": "Export",
+      "issueDate": "2022-04-20"
+    },
+    {
+      "keyIndex": 85,
+      "position": 706,
+      "name": "Agriculture",
+      "issueDate": "2022-03-30"
+    },
+    {
+      "keyIndex": 10197,
+      "position": 684,
+      "name": "Counsellor",
+      "issueDate": "2022-03-30"
+    }
+  ],
+  "latestJobSection": [
+    { "name": "Latest Jobs", "total": 895537, "url": "/latest-jobs" },
+    { "name": "Wednesday Jobs", "total": 490591, "url": "/wednesday-jobs" },
+    { "name": "Global Jobs", "total": 255006, "url": "/global-placement-jobs" },
+    { "name": "Partner Jobs", "total": 52549, "url": "/partner-jobs" },
+    { "name": "Government Jobs", "total": 30303, "url": "/government-jobs" },
+    { "name": "CXO Jobs", "total": 10946, "url": "/cxo-jobs" },
+    { "name": "Trending Jobs", "total": 5781, "url": "/trending-jobs" },
+    { "name": "Jobs this week", "total": 474, "url": "/jobsthisweek" },
+    { "name": "Freshers/Start-up Jobs", "total": 474, "url": "/fresher-jobs" },
+    { "name": "Technological Jobs", "total": 474, "url": "/tech-jobs" }
+  ],
+  "levelsFilter": [
+    {
+      "position": 15537,
+      "keyIndex": 15913,
+      "name": " Directors, VP",
+      "issuedate": "2022-04-26"
+    },
+    {
+      "position": 496,
+      "keyIndex": 15915,
+      "name": "Fresher",
+      "issuedate": "2022-01-13"
+    },
+    {
+      "position": 5403,
+      "keyIndex": 15906,
+      "name": " CEO (CHIEF EXECUTIVE OFFICER), CMO, COO, CIO, President",
+      "issuedate": "2022-04-22"
+    },
+    {
+      "position": 256054,
+      "keyIndex": 15902,
+      "name": " Executive, Assistant",
+      "issuedate": "2022-04-27"
+    },
+    {
+      "position": 58618,
+      "keyIndex": 15909,
+      "name": " Sr. Manager, General Manager",
+      "issuedate": "2022-04-27"
+    },
+    {
+      "position": 178178,
+      "keyIndex": 15908,
+      "name": " Manager, Assistant Manager",
+      "issuedate": "2022-04-27"
+    }
+  ],
+  "positionFilter": [
+    {
+      "keyIndex": 48701,
+      "name": "Assistant Professor",
+      "position": 7036,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 47840,
+      "name": "Professor",
+      "position": 6400,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 50540,
+      "name": "ASSOCIATE PROFESSOR",
+      "position": 5963,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 47616,
+      "name": "PRINCIPAL",
+      "position": 5945,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 48727,
+      "name": "FACULTY",
+      "position": 4181,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 47444,
+      "name": "LIBRARIAN",
+      "position": 4096,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 48688,
+      "name": "Accountant",
+      "position": 3738,
+      "issuedate": "2022-04-27"
+    },
+    {
+      "keyIndex": 47405,
+      "name": "Director",
+      "position": 3246,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 47799,
+      "name": "RECEPTIONIST",
+      "position": 3103,
+      "issuedate": "2022-04-26"
+    },
+    {
+      "keyIndex": 47706,
+      "name": "SALES EXECUTIVE",
+      "position": 2964,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 47781,
+      "name": "Project Manager",
+      "position": 2735,
+      "issuedate": "2022-04-26"
+    },
+    {
+      "keyIndex": 48830,
+      "name": "Sales Manager",
+      "position": 2569,
+      "issuedate": "2022-04-06"
+    },
+    {
+      "keyIndex": 47801,
+      "name": "Marketing Manager",
+      "position": 2405,
+      "issuedate": "2022-04-26"
+    },
+    {
+      "keyIndex": 49200,
+      "name": "Marketing Executive",
+      "position": 2264,
+      "issuedate": "2022-04-26"
+    },
+    {
+      "keyIndex": 48632,
+      "name": "AREA SALES MANAGER",
+      "position": 2186,
+      "issuedate": "2022-04-20"
+    },
+    {
+      "keyIndex": 47391,
+      "name": "General Manager",
+      "position": 2093,
+      "issuedate": "2022-04-08"
+    },
+    {
+      "keyIndex": 58271,
+      "name": "Primary Teacher",
+      "position": 2070,
+      "issuedate": "2022-04-19"
+    },
+    {
+      "keyIndex": 47625,
+      "name": "REGISTRAR",
+      "position": 1833,
+      "issuedate": "2022-04-22"
+    },
+    {
+      "keyIndex": 47388,
+      "name": "Manager",
+      "position": 1815,
+      "issuedate": "2022-04-13"
+    },
+    {
+      "keyIndex": 47403,
+      "name": "Electrical Engineer",
+      "position": 1661,
+      "issuedate": "2022-03-09"
+    },
+    {
+      "keyIndex": 47833,
+      "name": "LECTURER",
+      "position": 1571,
+      "issuedate": "2022-04-19"
+    }
+  ]
+}
