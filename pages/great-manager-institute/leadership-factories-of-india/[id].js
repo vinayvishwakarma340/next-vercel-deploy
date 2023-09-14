@@ -4,7 +4,6 @@ import {
   MapIcon,
   MapPinIcon,
   PhoneArrowUpRightIcon,
-  PlusCircleIcon,
 } from "@heroicons/react/24/outline";
 import MainHeader from "../../../Components/MainHeader";
 import { Fragment, useRef, useState, useEffect } from "react";
@@ -28,7 +27,6 @@ import useRemoveSpaceUrl from "../../../Components/CustomHook/useRemoveSpaceUrl"
 import dynamic from "next/dynamic";
 import FourZeroFour from "../../../Components/FourZeroFour";
 import { GetLeadershipFactoryById } from "../../api/gmiApi";
-import SimilarCompany from "../../../Components/NewCompo/SimilarCompany";
 import SimilarCompanyLeadership from "../../../Components/NewCompo/SimilarCompanyLeadership";
 import Image from "next/image";
 const Footer = dynamic(() => import("../../../Components/Footer"), { srr: true });
@@ -53,123 +51,11 @@ const LeadershipFactory = ({ props }) => {
   const [showModal, setShowModal] = useState(false);
 
 
-  console.log(leadershipFactoryDetail, "dfsf")
+  // console.log(leadershipFactoryDetail, "dfsf")
 
 
 
   const router = useRouter();
-  // useEffect(() => {
-
-  //   CheckSourceDevice();
-  //   setPage(parseInt(props.page));
-  // }, [props.page]);
-
-  // const pageChange = (val) => {
-  //   let goodUrl = router.asPath.split("?");
-  //   router.push(`/${goodUrl[0]}?page=${val}`);
-  // };
-
-  // const CheckSourceDevice = () => {
-  //   if (
-  //     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone/i.test(
-  //       navigator.userAgent
-  //     )
-  //   ) {
-  //     setDeviceType("Mobile");
-  //   } else {
-  //     setDeviceType("Desktop");
-  //   }
-  // };
-
-  // const Event = () => {
-  //   gtag.event({
-  //     action: companydata.CompanyName,
-  //     category: "Company Impressions",
-  //     label: router.asPath,
-  //   });
-  // };
-  // const JoCardEvent = () => {
-  //   // gtag.pageview({ page_path: router.asPath });
-  //   window.gtag("config", GA_TRACKING_ID, {
-  //     page_location: router.asPath,
-  //   });
-  //   {
-  //     jobListDetail?.data &&
-  //       jobListDetail?.data?.map((item) => {
-  //         gtag.event({
-  //           action: item.CompanyName,
-  //           category: "Company Impressions",
-  //           label: router.asPath,
-  //         });
-  //       });
-  //   }
-  //   {
-  //     jobListDetail?.data &&
-  //       jobListDetail?.data?.map((item) => {
-  //         gtag.event({
-  //           action: item.CompanyName,
-  //           category: "Job Impressions",
-  //           label: item.JobId,
-  //         });
-  //       });
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   Event();
-  //   JoCardEvent();
-  //   SimilarJobEvent();
-  //   JoCardEvent();
-  // }, [companydata.CompanyName, similarcompany?.data, jobListDetail?.data]);
-
-  // const FollowButton = () => {
-  //   if (loggedIn) {
-  //     FollowApi();
-  //   } else {
-  //     Cookies.set(
-  //       "pathname",
-  //       "NewCompanyProfile/" + router.query.id[0] + "/" + router.query.id[1]
-  //     );
-  //     router.push("/times-ascent-signin");
-  //   }
-  // };
-
-  // const FollowApi = () => {
-  //   var myHeaders = new Headers();
-  //   myHeaders.append(
-  //     "Authorization",
-  //     process.env.API_TOKEN_AUTH_SERVER
-  //   );
-  //   myHeaders.append("Content-Type", "application/json");
-
-  //   var raw = JSON.stringify({
-  //     CompanyId: router.query.id[1],
-  //     CandidateId: Cookies.get("USERID"),
-  //   });
-
-  //   var requestOptions = {
-  //     method: "POST",
-  //     headers: myHeaders,
-  //     body: raw,
-  //     redirect: "follow",
-  //   };
-
-  //   fetch(
-  //     "https://api.timesascent.com/v1/admin1_1/FollowCompany",
-  //     requestOptions
-  //   )
-  //     .then((response) => response.json())
-  //     .then((result) => {
-  //       if (
-  //         result.status_code === 200 &&
-  //         result.status === "Success" &&
-  //         result.message === "data save successfully"
-  //       ) {
-  //         setShowModal(true);
-  //       }
-  //     })
-  //     .catch((error) => console.log("error", error));
-  // };
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -186,27 +72,7 @@ const LeadershipFactory = ({ props }) => {
   const executeScrollContact = () =>
     myRefContact.current.scrollIntoView({ behavior: "smooth" });
   const myRefJob = useRef(0);
-  // const executeScrollJob = () =>
-  //   myRefJob.current.scrollIntoView({ behavior: "smooth" });
 
-  // const About = () => {
-  //   return (
-  //     <>
-
-  //       {props?.leadershipFactoryDetail?.OtherLeadership?.map((item) => {
-  //         return <li className="mt-2 text-sm text-gray-500">{item.CompanyName}</li>;
-  //       })}
-  //     </>
-  //   );
-  // };
-
-  // const user = {
-  //   name: leadershipFactoryDetail?.CompanyName,
-  //   email: "chelsea.hagon@example.com",
-  //   role: leadershipFactoryDetail?.Location,
-  //   imageUrl: "https://timesascent.com/" + leadershipFactoryDetail?.CompanyLogo,
-  //   Industry: leadershipFactoryDetail?.Industry,
-  // };
   const navigation = [
     // { name: "Jobs", href: executeScrollJob, current: true },
     { name: "About", href: executeScrollAbout, current: false },
@@ -219,27 +85,7 @@ const LeadershipFactory = ({ props }) => {
     { name: "Settings", href: "#" },
     { name: "Sign out", href: "#" },
   ];
-  // const stats = [
-  //   {
-  //     label: "Jobs",
-  //     value: similarcompany.TotlejobsCount ? similarcompany.TotlejobsCount : "",
-  //     href:
-  //       "/" + useRemoveSpaceUrl(companydata.CompanyName) + "-jobs/designation",
-  //   },
-  //   {
-  //     label: "Position",
-  //     value: similarcompany.TotleLocationCount
-  //       ? similarcompany.TotleLocationCount
-  //       : "",
-  //   },
-  //   {
-  //     label: "Locations",
-  //     value: similarcompany.DistinctLocation
-  //       ? similarcompany.DistinctLocation
-  //       : "",
-  //     href: "/jobs-in-" + companydata.city?.split("/")[0],
-  //   },
-  // ];
+
 
   const actions = [
     {
@@ -964,19 +810,7 @@ const LeadershipFactory = ({ props }) => {
                     <div className="border border-gray-50 shadow rounded">
                       <SimilarCompanyLeadership topcompany={props.leadershipFactoryDetail.OtherLeadership} />
                     </div>
-                    {/* {!isFeaturedCompany && (
-                      <div className="my-6 w-[300px] h-[250px] bg-gray-300 flex items-center text-center mx-auto">
-                        {adShow ? (
-                          <GoogleAd_300x250
-                            path="/1064661/ta.com_mrec1_job"
-                            ads_Id="div-gpt-ad-1674554579449-0"
-                            size={[[300, 250]]}
-                          />
-                        ) : (
-                          <SkeletonMrec />
-                        )}
-                      </div>
-                    )} */}
+
 
                     <div className="border border-gray-50 shadow rounded">
                       <div className="px-6 py-3 bg-white">
@@ -986,19 +820,7 @@ const LeadershipFactory = ({ props }) => {
                         />
                       </div>
                     </div>
-                    {/* {!isFeaturedCompany && (
-                      <div className="mt-6">
-                        {adShow ? (
-                          <GoogleAd_300x250
-                            path="/22637491760/timesascent.com_erelego_d_ap_300x250"
-                            ads_Id="div-gpt-ad-1674643828785-0"
-                            size={[[300, 250]]}
-                          />
-                        ) : (
-                          <SkeletonMrec />
-                        )}
-                      </div>
-                    )} */}
+
                   </div>
                 </div>
               </div>

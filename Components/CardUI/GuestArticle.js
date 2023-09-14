@@ -5,9 +5,8 @@ import useRemoveSpaceUrl from "../CustomHook/useRemoveSpaceUrl";
 const GuestArticle = (props) => {
   return (
     <a
-      href={`/articles/${useRemoveSpaceUrl(props.data.title)}/${
-        props.data.ArticleId
-      }`}
+      href={`/articles/${useRemoveSpaceUrl(props.data.title)}/${props.data.ArticleId
+        }`}
       className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
     >
       <div className="flex justify-between items-center mb-4 text-gray-500">
@@ -34,12 +33,12 @@ const GuestArticle = (props) => {
           >
             <Image
               style={{ objectFit: "cover", objectPosition: "center" }}
-              src={`https://timesascent.com${props.data.imagePath}`}
+              src={`https://timess3spore.s3.amazonaws.com/ndata${props.data.imagePath}`}
               fill
               sizes="(max-width: 20px) 100vw"
               alt="article image"
-              // placeholder="blur"
-              // blurDataURL="https://timesascent.com/TimeDummyLogo.webp"
+            // placeholder="blur"
+            // blurDataURL="https://timesascent.com/TimeDummyLogo.webp"
             />
           </div>
           <div className="ml-2 text-sm  truncate">

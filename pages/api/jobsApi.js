@@ -128,6 +128,51 @@ export const JobsDetailApi = async (id, ipAddress) => {
   }
 };
 
+export const MoreJobApi = async (designation, location, jobId) => {
+  var myHeaders = new Headers();
+  myHeaders.append(
+    "Authorization",
+    process.env.API_TOKEN_AUTH_SERVER
+  );
+  myHeaders.append("Content-Type", "application/json");
+
+  var raw = JSON.stringify({
+    Location: location,
+    Designation: designation,
+    printId: jobId,
+  });
+
+  // console.log(raw, "raw")
+  var requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
+  // Using a fetch here but could be any async operation to an external source
+  const response = await fetch(
+    `${process.env.Live_API_URL}/v1/api/apiTimes/MoreJobs`,
+    requestOptions
+  );
+
+  try {
+    const jsonData = await response.json();
+    return jsonData;
+  } catch (error) {
+    let apiError = {
+      status_code: 500,
+      status: "FAIL",
+      data: [],
+      count: "",
+      message: "data not found",
+    };
+    console.error(error, apiError); // you may also
+    return apiError;
+  }
+};
+
+
 export const SearchJobCard = async (jobs, location, global, page) => {
   var myHeaders = new Headers();
   myHeaders.append(

@@ -20,6 +20,7 @@ import { useEffect, useState } from "react";
 import LeadersOfChangeCard from "../../Components/CardUI/LeadersOfChangeCard";
 // import { GetLeadersOfChangeList } from "../api/leadersOfChangeApi";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const pages = [
   {
@@ -55,10 +56,12 @@ const index = ({ props }) => {
     return <FourZeroFour />;
   }
 
+  const router = useRouter();
   const [adShow, setadShow] = useState(false);
 
   const leadersOfChangeJson = props.LeadersOfChangeData.LeadersofChange;
-  const recommendedRead = props.LeadersOfChangeData.CareersScreen.recommended_Articles;
+  const recommendedRead =
+    props.LeadersOfChangeData.CareersScreen.recommended_Articles;
 
   useEffect(() => {
     const addTimer = setTimeout(() => {
@@ -70,7 +73,9 @@ const index = ({ props }) => {
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>Leaders of Change - Independence Day Special – timesascent.com</title>
+        <title>
+          Leaders of Change - Independence Day Special – timesascent.com
+        </title>
         <meta
           name="description"
           content={`Independence Day Special Feature: Leaders of Change`}
@@ -93,7 +98,10 @@ const index = ({ props }) => {
           sizes="16x16"
           href="https://timesascent.com/Times_Ascent_Icon.png"
         />
-        <meta property="og:title" content="Leaders of Change - Independence Day Special" />
+        <meta
+          property="og:title"
+          content="Leaders of Change - Independence Day Special"
+        />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
@@ -111,7 +119,10 @@ const index = ({ props }) => {
           property="twitter:image"
           content="https://timesascent.com/Times_Ascent_Icon.png"
         />
-        <meta property="twitter:title" content="Leaders of Change - Independence Day Special" />
+        <meta
+          property="twitter:title"
+          content="Leaders of Change - Independence Day Special"
+        />
         <meta
           property="twitter:description"
           content="Independence Day Special Feature: Leaders of Change"
@@ -125,6 +136,29 @@ const index = ({ props }) => {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://timesascent.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Leadership Factory",
+                  item: `https://timesascent.com${router.asPath}`,
+                },
+              ],
+            }),
+          }}
+        />
       </Head>
 
       <MainHeader />
@@ -143,7 +177,6 @@ const index = ({ props }) => {
         <div className={"block sm:hidden relative"}>
           <Image
             priority
-
             style={{ objectFit: "cover" }}
             src="/leadersOfChange/Banner/LeadersOfChangeMobile.webp"
             width={768}
@@ -169,7 +202,7 @@ const index = ({ props }) => {
               <div className="font-playfairDisplay">
                 <HeadingWithIconH1
                   headingText="About Leaders of Change"
-                // href="/great-manager-institute/about"
+                  // href="/great-manager-institute/about"
                 />
               </div>
               <p>
@@ -183,18 +216,14 @@ const index = ({ props }) => {
               </p>
             </section>
 
-
             <section className="mt-6">
               <div className="flex justify-start items-center mb-4">
                 <div className="font-playfairDisplay w-[calc(100%-50px)] sm:w-auto">
                   <HeadingWithIcon
                     headingText="Leaders of Change"
-                  // href="/great-manager-institute/leadership-factories-of-india"
+                    // href="/great-manager-institute/leadership-factories-of-india"
                   />
-
                 </div>
-
-
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {leadersOfChangeJson.map((item, keyindex) => {
@@ -232,7 +261,7 @@ const index = ({ props }) => {
               <div className="font-playfairDisplay">
                 <HeadingWithIcon
                   headingText="Recommended Read"
-                // href="/articleslist/featured-articles"
+                  // href="/articleslist/featured-articles"
                 />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -277,8 +306,6 @@ const index = ({ props }) => {
               </div>
             </section>
           </div>
-
-
         </div>
       </main>
 
@@ -308,10 +335,10 @@ export async function getServerSideProps(context) {
     // );
     // const RecommendedReadData = await RecommendedReadResponse.json();
 
-    const LeadersOfChangeResponse = await fetch("https://timesascent.com/json/new/LeadersOfChangeMainJSON.json");
+    const LeadersOfChangeResponse = await fetch(
+      "https://timesascent.com/json/new/LeadersOfChangeMainJSON.json"
+    );
     const LeadersOfChangeData = await LeadersOfChangeResponse.json();
-
-
 
     props = {
       isMobile,

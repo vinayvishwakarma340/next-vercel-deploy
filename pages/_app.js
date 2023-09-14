@@ -68,7 +68,7 @@ function MyApp({ session, Component, pageProps }) {
   //     redirect: 'follow'
   //   };
 
-  //   fetch("https://api.timesascent.com/v1/admin1_1/PageLoadLogs", requestOptions)
+  //   fetch("https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/v1/admin1_1/PageLoadLogs", requestOptions)
   //     .then(response => response.json())
   //     .then(result => {
   //       if (result.status === "SUCCESS" && result.status_code == 200) {
@@ -79,12 +79,12 @@ function MyApp({ session, Component, pageProps }) {
   // }
 
   useEffect(() => {
-    if (!Cookies.get("userLoggedIn")) {
-      googleOneTap(options, (response) => {
-        // Send response to server
-        googleLoginSignup(response.credential);
-      });
-    }
+    googleOneTap(options, (response) => {
+      console.log("triiiiff")
+      console.log(response, "jjjkkjjks")
+      // Send response to server
+      // googleLoginSignup(response.credential);
+    });
 
     const intertitialAd = JSON.parse(localStorage.getItem("intertitialAd"));
     if (!intertitialAd?.showAd) {

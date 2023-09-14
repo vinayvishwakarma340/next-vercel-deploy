@@ -1,6 +1,8 @@
 import Footer from "../../Components/Footer";
 import MainHeader from "../../Components/MainHeader";
-import HeadingWithIcon, { HeadingWithIconH1 } from "../../Components/HeadingUI/HeadingWithIcon";
+import HeadingWithIcon, {
+  HeadingWithIconH1,
+} from "../../Components/HeadingUI/HeadingWithIcon";
 import SecondryWidget from "../../Components/Widget/SecondryWidget";
 import BreadCrumbs from "../../Components/BreadCrumbs";
 import Head from "next/head";
@@ -8,7 +10,7 @@ import GoogleAd_300x250 from "../../Components/GoogleAds/GoogleAd_300x250";
 import FourZeroFour from "../../Components/FourZeroFour";
 import ManagersCardMain from "../../Components/CardUI/ManagersCardMain";
 import Image from "next/image";
-
+import { useRouter } from "next/router";
 
 const pages = [
   {
@@ -27,21 +29,26 @@ const allGmi = ({ props }) => {
   if (props.isPageError) {
     return <FourZeroFour />;
   }
-  const greatManagerInstitute = props?.greatManagerInstituteJson.Data;
 
+  const router = useRouter();
+  const greatManagerInstitute = props?.greatManagerInstituteJson.Data;
 
   return (
     <div>
       <Head>
         <meta charSet="utf-8" />
         <title>
-          List of Top 100 Great People Managers by Great Manager Institute on timesascent.com
+          List of Top 100 Great People Managers by Great Manager Institute on
+          timesascent.com
         </title>
         <meta
           name="description"
           content={`Great Manager Institute announces a list of the Top 100 Managers on timesascent.com`}
         />
-        <link rel="canonical" href="https://timesascent.com/great-manager-institute/top-100-great-people-managers-of-2023" />
+        <link
+          rel="canonical"
+          href="https://timesascent.com/great-manager-institute/top-100-great-people-managers-of-2023"
+        />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
         <link
@@ -65,7 +72,10 @@ const allGmi = ({ props }) => {
           property="og:description"
           content="Great Manager Institute announces a list of the Top 100 Managers on timesascent.com"
         />
-        <meta property="og:url" content="https://timesascent.com/great-manager-institute/top-100-great-people-managers-of-2023" />
+        <meta
+          property="og:url"
+          content="https://timesascent.com/great-manager-institute/top-100-great-people-managers-of-2023"
+        />
         <meta
           property="og:image"
           content="https://timesascent.com/Times_Ascent_Icon.png"
@@ -91,7 +101,7 @@ const allGmi = ({ props }) => {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
-        {/* <script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -106,13 +116,20 @@ const allGmi = ({ props }) => {
                 },
                 {
                   "@type": "ListItem",
-                  position: 1,
-                  name: "Events",
+                  position: 2,
+                  name: "Great Manager Institute",
+                  item: `https://timesascent.com/great-manager-institute`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Top-100 Great People Managers of 2023",
+                  item: `https://timesascent.com${router.asPath}`,
                 },
               ],
             }),
           }}
-        /> */}
+        />
       </Head>
 
       <MainHeader />
@@ -155,7 +172,7 @@ const allGmi = ({ props }) => {
                 <div className="font-playfairDisplay">
                   <HeadingWithIconH1
                     headingText="Top 100 Great People Managers of 2023 (in alphabetical order)"
-                  // href="/great-manager-institute"
+                    // href="/great-manager-institute"
                   />
                 </div>
                 <div className={"ml-4 relative"}>
@@ -172,7 +189,11 @@ const allGmi = ({ props }) => {
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {greatManagerInstitute.slice(0, 75).map((item, index) => {
                   return (
-                    <ManagersCardMain key={index} data={item} index={index + 1} />
+                    <ManagersCardMain
+                      key={index}
+                      data={item}
+                      index={index + 1}
+                    />
                   );
                 })}
               </div>
@@ -182,7 +203,7 @@ const allGmi = ({ props }) => {
                 <div className="font-playfairDisplay">
                   <HeadingWithIcon
                     headingText="A few Business Leaders in the Top 100 list (in alphabetical order)"
-                  // href="/great-manager-institute"
+                    // href="/great-manager-institute"
                   />
                 </div>
                 <div className={"ml-4 relative"}>
@@ -199,7 +220,11 @@ const allGmi = ({ props }) => {
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {greatManagerInstitute.slice(75, 100).map((item, index) => {
                   return (
-                    <ManagersCardMain key={index} data={item} index={index + 1} />
+                    <ManagersCardMain
+                      key={index}
+                      data={item}
+                      index={index + 1}
+                    />
                   );
                 })}
               </div>
@@ -229,7 +254,7 @@ const allGmi = ({ props }) => {
       </main>
 
       <Footer />
-    </div >
+    </div>
   );
 };
 export async function getServerSideProps(context) {
@@ -246,15 +271,14 @@ export async function getServerSideProps(context) {
   );
   let props = {};
   try {
-
     const greatManagerInstitute = await fetch(
       `${process.env.LIVE_HOST}/json/GeneralManagerGetFrontEndList.json`
-    )
+    );
     const greatManagerInstituteJson = await greatManagerInstitute.json();
 
     props = {
       isMobile,
-      greatManagerInstituteJson
+      greatManagerInstituteJson,
     };
   } catch (err) {
     console.log("api error in forher page");

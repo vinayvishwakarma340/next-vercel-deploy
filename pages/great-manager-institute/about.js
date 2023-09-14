@@ -7,6 +7,7 @@ import Head from "next/head";
 import GoogleAd_300x250 from "../../Components/GoogleAds/GoogleAd_300x250";
 import FourZeroFour from "../../Components/FourZeroFour";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 
 const pages = [
@@ -25,6 +26,8 @@ const index = ({ props }) => {
   if (props.isPageError) {
     return <FourZeroFour />;
   }
+
+  const router = useRouter();
 
   return (
     <div>
@@ -87,7 +90,7 @@ const index = ({ props }) => {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
-        {/* <script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -102,13 +105,20 @@ const index = ({ props }) => {
                 },
                 {
                   "@type": "ListItem",
-                  position: 1,
-                  name: "Events",
+                  position: 2,
+                  name: "Great Manager Institute",
+                  item: `https://timesascent.com/great-manager-institute`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "About",
+                  item: `https://timesascent.com${router.asPath}`,
                 },
               ],
             }),
           }}
-        /> */}
+        />
       </Head>
 
       <MainHeader />

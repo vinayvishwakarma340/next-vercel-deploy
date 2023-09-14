@@ -34,7 +34,7 @@ const RelatedArticle = (props) => {
                 >
                   <div className="relative h-[120px] w-full">
                     <Image
-                      src={"https://timesascent.com" + item.imagePath}
+                      src={"https://timess3spore.s3.amazonaws.com/ndata" + item.imagePath}
                       className="object-cover"
                       fill
                       quality={6}

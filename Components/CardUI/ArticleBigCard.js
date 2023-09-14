@@ -5,7 +5,7 @@ const ArticleBigCard = ({ data }) => {
   return (
     <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
       <Image
-        src={`https://timesascent.com${data.imagePath}`}
+        src={`https://timess3spore.s3.amazonaws.com/ndata${data.imagePath}`}
         fill
         priority={true}
         quality={75}

@@ -12,7 +12,7 @@ const ArtcleWidget = (props) => {
       <div className={"h-40 sm:h-32 flex-shrink-0 w-full  relative "}>
         <Image
           style={{ objectFit: "cover", objectPosition: "top" }}
-          src={`https://timesascent.com${props.data.imagePath}`}
+          src={`https://timess3spore.s3.amazonaws.com/ndata${props.data.imagePath}`}
           fill
           quality={25}
           sizes="(max-width: 500px) 100vw"

@@ -20,9 +20,10 @@ const login = () => {
 
 
   const gotoPage = () => {
-    if (Cookies.get("pathname")) {
-      window.open(Cookies.get("pathname"), "_self");
-    }
+    router.back()
+    // if (Cookies.get("pathname")) {
+    //   window.open(Cookies.get("pathname"), "_self");
+    // }
   };
 
   useEffect(() => {
@@ -91,7 +92,7 @@ const login = () => {
   //     "Authorization",
   //     process.env.API_TOKEN_AUTH_SERVER
   //   );
-  //   await fetch("https://api.timesascent.com/v1/admin1_1/GoogleLogin", {
+  //   await fetch("https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/v1/admin1_1/GoogleLogin", {
   //     method: "POST",
   //     body: JSON.stringify({
   //       Token: token,

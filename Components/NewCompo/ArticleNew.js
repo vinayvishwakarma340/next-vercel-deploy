@@ -14,7 +14,7 @@ const ArticleNew = (props) => {
                 <div className={"h-48 top-0 w-full  relative"}>
                   <Image
                     style={{ objectFit: "cover", objectPosition: "top" }}
-                    src={`https://timesascent.com${props.data[0].imagePath}`}
+                    src={`https://timess3spore.s3.amazonaws.com/ndata${props.data[0].imagePath}`}
                     fill
                     alt={props.data[0].title}
                     sizes="(max-width: 400px) 100vw"
@@ -92,7 +92,7 @@ const ArticleNew = (props) => {
                     <Image
                       priority={props.priority}
                       style={{ objectFit: "cover" }}
-                      src={`https://timesascent.com${item.imagePath}`}
+                      src={`https://timess3spore.s3.amazonaws.com/ndata${item.imagePath}`}
                       fill
                       sizes="(max-width: 200px) 100vw"
                       quality={15}

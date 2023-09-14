@@ -47,7 +47,7 @@ const RadioGroups = () => {
   //     redirect: "follow",
   //   };
 
-  //   fetch("https://api.timesascent.com/adminapi/GetOpinionPoll", requestOptions)
+  //   fetch("https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/adminapi/GetOpinionPoll", requestOptions)
   //     .then((response) => response.json())
   //     .then((result) => {
   //       if (result.status_code === 200) {

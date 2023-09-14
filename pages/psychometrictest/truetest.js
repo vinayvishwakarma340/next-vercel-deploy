@@ -187,29 +187,7 @@ const Truetest = () => {
   }
 
 
-  // useEffect(() => {
-  //   const pageLoadingLog = async (redirectionURL) => {
-  //     await fetch("https://api.timesascent.com/v1/api/apiTimes/UserActivity", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Authorization: process.env.API_TOKEN_AUTH_SERVER,
-  //       },
-  //       body: JSON.stringify({
-  //         CandidateId: Cookies.get("USERID") || "-",
-  //         Company: "truetest",
-  //         Event: "pageView",
-  //         RedirectionUrl: redirectionURL,
-  //         Page: "https://timesascent.com" + router.pathname,
-  //       }),
-  //     });
-  //   };
 
-  //   const logCases = () => {
-  //     pageLoadingLog("https://www.truetest.in/times-ascent.html");
-  //   };
-  //   logCases();
-  // }, ["truetest", router.pathname]);
 
   const pages = [
     {

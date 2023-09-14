@@ -375,13 +375,7 @@ const HRProfessionals = ({ props }) => {
               buttonText="Share your profile"
               href="/share-your-profile"
             />
-            {/* <SecondryWidget
-              iconUrl="https://api.timesascent.com/recruiterpostjob/staticGrowth.svg/2022/08/18/1660816388.svg"
-              text2="Get Best Jobs"
-              text3="India's Best Companies Work For"
-              buttonText="Great Place to Work"
-              href="/Great-Places-To-Work-2022"
-            /> */}
+
           </div>
         </section>
 
@@ -408,13 +402,7 @@ const HRProfessionals = ({ props }) => {
           </div>
           <div className="mt-6 md:mt-0  md:ml-[20px] md:w-[300px] h-full">
             <FreelancerWidget {...freelancerWidgetData} />
-            {/* <SecondryWidget
-              iconUrl="https://api.timesascent.com/recruiterpostjob/staticGrowth.svg/2022/08/18/1660816388.svg"
-              text2="HR Professional"
-              text3="Recognizing HR Excellence "
-              buttonText="Share your profile"
-              href="/share-your-profile"
-            /> */}
+
           </div>
         </section>
 

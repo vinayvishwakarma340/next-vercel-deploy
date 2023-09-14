@@ -25,7 +25,7 @@ const FolloweCompanies = (props) => {
               ) : (
                 <img
                   className="mx-auto h-20 w-20 flex-shrink-0 rounded-full"
-                  src={`https://timesascent.com${person.imagePath}`}
+                  src={`https://timess3spore.s3.amazonaws.com/ndata${person.imagePath}`}
                   alt={person.imagePath}
                 />
               )}

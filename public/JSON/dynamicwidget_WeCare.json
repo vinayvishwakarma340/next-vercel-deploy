@@ -1,1 +1,23 @@
-{"status_code": 200, "status": "SUCCESS", "data": [{"ID": "25", "KeyIndex": "25", "DynamicWidgetID": "40e53503-1edb-11ed-929f-064df626ed42", "Title": "Share Now", "Description": "Tell us your stories and inspire more change", "RedirectionUrl": "/corporates-care-request-form", "PageName": "WeCare", "IconImage": "https://api.timesascent.com/recruiterpostjob/staticMessage_Outline.svg/2022/08/18/1660816255.svg", "IsDeleted": "0", "IsPublished": "1", "CreatedAt": "2022-08-18T15:20:55", "CreatedBy": "System", "UpdatedAt": "2022-08-18T15:20:55", "UpdatedBy": "System"}], "message": "Data found"}
+{
+  "status_code": 200,
+  "status": "SUCCESS",
+  "data": [
+    {
+      "ID": "25",
+      "KeyIndex": "25",
+      "DynamicWidgetID": "40e53503-1edb-11ed-929f-064df626ed42",
+      "Title": "Share Now",
+      "Description": "Tell us your stories and inspire more change",
+      "RedirectionUrl": "/corporates-care-request-form",
+      "PageName": "WeCare",
+      "IconImage": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/recruiterpostjob/staticMessage_Outline.svg/2022/08/18/1660816255.svg",
+      "IsDeleted": "0",
+      "IsPublished": "1",
+      "CreatedAt": "2022-08-18T15:20:55",
+      "CreatedBy": "System",
+      "UpdatedAt": "2022-08-18T15:20:55",
+      "UpdatedBy": "System"
+    }
+  ],
+  "message": "Data found"
+}

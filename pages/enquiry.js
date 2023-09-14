@@ -41,7 +41,7 @@ const Enquiry = () => {
     };
 
     await fetch(
-      "https://api.timesascent.com/v1/api/apiTimes/AdvertiseWithUs",
+      `${process.env.Live_API_URL}/v1/api/apiTimes/AdvertiseWithUs`,
       requestOptions
     )
       .then((response) => response.json())

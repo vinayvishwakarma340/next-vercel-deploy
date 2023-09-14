@@ -12,12 +12,14 @@ import FeatureOrganizaionNew from "../Components/NewCompo/FeatureOrganizaionNew"
 import SuccessModal from "../Components/Modal/SuccessModal";
 import RozgaarPartnerLogo from "../Components/NewCompo/RozgaarPartnerLogo";
 import FreelancerSuccessModal from "../Components/Modal/FreelancerSuccessModal";
+import { useRouter } from "next/router";
 
 const freelancer = ({ props }) => {
   const [freelancerData, setFreelancerData] = useState(props);
   const [email, setEmail] = useState("");
   const [show, setShow] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const router = useRouter();
 
   const stats = [
     { label: "Founded", value: "2020" },
@@ -255,8 +257,9 @@ const freelancer = ({ props }) => {
                 },
                 {
                   "@type": "ListItem",
-                  position: 1,
+                  position: 2,
                   name: "Freelancer",
+                  item: `https://timesascent.com${router.asPath}`,
                 },
               ],
             }),

@@ -5,6 +5,7 @@ import MainHeader from "../../Components/MainHeader";
 import {
   CandidateDetailsApi,
   JobsDetailApi,
+  MoreJobApi,
   NewJobsRelatedJobs,
 } from "../api/jobsApi";
 import Cookies from "js-cookie";
@@ -20,13 +21,17 @@ import SkeletonMrec from "../../Components/Skeleton/SkeletonMrec";
 import GoogleAd_Hrec from "../../Components/GoogleAds/GoogleAd_Hrec";
 import SkeletonHrec from "../../Components/Skeleton/SkeletonHrec";
 
-
 // import SimilarJob from "../../Components/jobs/JobDetail/SimilarJob";
 
 import dynamic from "next/dynamic";
+import SimilarJobCard from "../../Components/jobs/JobDetail/SimilarJobCard";
 // import Script from "next/script";
-const JobModalRedirection = dynamic(() => import("../../Components/Modal/JobModalRedirection"));
-const JobApplicationDetail = dynamic(() => import("../../Components/Modal/JobApplicationDetail"));
+const JobModalRedirection = dynamic(() =>
+  import("../../Components/Modal/JobModalRedirection")
+);
+const JobApplicationDetail = dynamic(() =>
+  import("../../Components/Modal/JobApplicationDetail")
+);
 const InterestingJobs = dynamic(() =>
   import("../../Components/jobs/JobDetail/InterestingJobs")
 );
@@ -43,6 +48,8 @@ const jobdetail = (props) => {
 
   const position = props.props.relatedData.data;
   const resume1 = props.props.candidateDetail.Resume;
+  const moreJobData = props.props.moreJobData.data ? props.props.moreJobData.data : "";
+
   let datePosted = new Date(jobData.datePosted);
   const [resume, setResume] = useState([]);
   const [validThrough, setValidThrough] = useState();
@@ -69,7 +76,7 @@ const jobdetail = (props) => {
       setValidThrough(new Date(validThroughMonth).toISOString());
     }
     setValidThroughMonth(datePosted.setDate(datePosted.getDate() + 0));
-    return () => clearTimeout(addTimer)
+    return () => clearTimeout(addTimer);
   }, [validThroughMonth, jobData.datePosted]);
 
   useEffect(() => {
@@ -82,15 +89,11 @@ const jobdetail = (props) => {
     SimilarJobEvent();
   }, [jobData.CompanyName, position]);
 
-
-
   const myRefabout = useRef(0);
   const similarJobRef = useRef(0);
-  const similarJobsScrollAbout = () =>
-    similarJobRef.current.scrollIntoView();
+  const similarJobsScrollAbout = () => similarJobRef.current.scrollIntoView();
 
-  const executeScrollAbout = () =>
-    myRefabout.current.scrollIntoView();
+  const executeScrollAbout = () => myRefabout.current.scrollIntoView();
 
   const Event = () => {
     // const pageLoadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
@@ -125,10 +128,7 @@ const jobdetail = (props) => {
     event.preventDefault();
     setLoading(true);
     var myHeaders = new Headers();
-    myHeaders.append(
-      "Authorization",
-      process.env.API_TOKEN_AUTH_SERVER
-    );
+    myHeaders.append("Authorization", process.env.API_TOKEN_AUTH_SERVER);
 
     var formdata = new FormData();
     formdata.append("email", Cookies.get("USEREMAIL"));
@@ -187,20 +187,20 @@ const jobdetail = (props) => {
     },
   ];
 
-
-
-
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
-        <title>{`${jobData.positionTitle ? jobData.positionTitle : ""
-          } job vacancy at ${jobData.CompanyName ? jobData.CompanyName : ""
-          }`}</title>
+        <title>{`${
+          jobData.positionTitle ? jobData.positionTitle : ""
+        } job vacancy at ${
+          jobData.CompanyName ? jobData.CompanyName : ""
+        }`}</title>
         <meta
           name="description"
-          content={`${jobData.positionTitle ? jobData.positionTitle : ""} at ${jobData.CompanyName ? jobData.CompanyName : ""
-            } in ${jobData.city ? jobData.city : ""} - timesascent.com`}
+          content={`${jobData.positionTitle ? jobData.positionTitle : ""} at ${
+            jobData.CompanyName ? jobData.CompanyName : ""
+          } in ${jobData.city ? jobData.city : ""} - timesascent.com`}
         />
         <link
           rel="canonical"
@@ -222,14 +222,16 @@ const jobdetail = (props) => {
         />
         <meta
           property="og:title"
-          content={`${jobData.positionTitle ? jobData.positionTitle : ""} at ${jobData.CompanyName ? jobData.CompanyName : ""
-            } in ${jobData.city ? jobData.city : ""} - timesascent.com`}
+          content={`${jobData.positionTitle ? jobData.positionTitle : ""} at ${
+            jobData.CompanyName ? jobData.CompanyName : ""
+          } in ${jobData.city ? jobData.city : ""} - timesascent.com`}
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content={`${jobData.positionTitle ? jobData.positionTitle : ""} at ${jobData.CompanyName ? jobData.CompanyName : ""
-            } in ${jobData.city ? jobData.city : ""} - timesascent.com`}
+          content={`${jobData.positionTitle ? jobData.positionTitle : ""} at ${
+            jobData.CompanyName ? jobData.CompanyName : ""
+          } in ${jobData.city ? jobData.city : ""} - timesascent.com`}
         />
         <meta
           property="og:url"
@@ -245,13 +247,15 @@ const jobdetail = (props) => {
         />
         <meta
           property="twitter:title"
-          content={`${jobData.positionTitle ? jobData.positionTitle : ""} at ${jobData.CompanyName ? jobData.CompanyName : ""
-            }`}
+          content={`${jobData.positionTitle ? jobData.positionTitle : ""} at ${
+            jobData.CompanyName ? jobData.CompanyName : ""
+          }`}
         />
         <meta
           property="twitter:description"
-          content={`${jobData.positionTitle ? jobData.positionTitle : ""} at ${jobData.CompanyName ? jobData.CompanyName : ""
-            }`}
+          content={`${jobData.positionTitle ? jobData.positionTitle : ""} at ${
+            jobData.CompanyName ? jobData.CompanyName : ""
+          }`}
         />
         <meta property="twitter:card" content="summary" />
         <meta
@@ -299,15 +303,18 @@ const jobdetail = (props) => {
               "@type": "JobPosting",
               name: `${jobData.positionTitle}`,
               image: `${jobData.thumbnail || jobData.imageUrl}`,
-              description: `${jobData.jobDescription || "job detail discription"} `,
+              description: `${
+                jobData.jobDescription || "job detail discription"
+              } `,
               url: `${"https://timesascent.com" + router.asPath}`,
               employmentType: "Fulltime",
               experienceRequirements: {
                 "@type": "OccupationalExperienceRequirements",
-                monthsOfExperience: `${jobData.minExperience === "0" || jobData.minExperience === ""
-                  ? 1
-                  : parseInt(jobData.minExperience)
-                  }`,
+                monthsOfExperience: `${
+                  jobData.minExperience === "0" || jobData.minExperience === ""
+                    ? 1
+                    : parseInt(jobData.minExperience)
+                }`,
               },
               baseSalary: {
                 "@type": "MonetaryAmount",
@@ -327,16 +334,18 @@ const jobdetail = (props) => {
                 "@type": "Place",
                 address: {
                   "@type": "PostalAddress",
-                  addressLocality: `${jobData.locationName || 'India'}`,
-                  addressRegion: `${jobData.state || 'India'}`,
-                  streetAddress: jobData.StreetAddress || jobData.locationName || 'India',
-                  postalCode: `${jobData.PostalCode || '226002'}`,
+                  addressLocality: `${jobData.locationName || "India"}`,
+                  addressRegion: `${jobData.state || "India"}`,
+                  streetAddress:
+                    jobData.StreetAddress || jobData.locationName || "India",
+                  postalCode: `${jobData.PostalCode || "226002"}`,
                   addressCountry: jobData.country || "India",
                 },
               },
               occupationalCategory: `${jobData.Category}`,
-              qualifications: `${jobData.applicationDetails + " " + jobData.jobDescription
-                }`,
+              qualifications: `${
+                jobData.applicationDetails + " " + jobData.jobDescription
+              }`,
               skills: `${jobData.Category}`,
               title: `${jobData.positionTitle}`,
             }),
@@ -369,7 +378,6 @@ const jobdetail = (props) => {
             })();`,
           }}
         /> */}
-
       </Head>
       <MainHeader />
       <JobModalRedirection
@@ -401,26 +409,49 @@ const jobdetail = (props) => {
       <div className="relative py-4 container lg:py-4 bg-white">
         <BreadCrumbs data={pages} />
       </div>
-
       <div className="main  lg:flex lg:justify-between box-border w-full py-4 md:py-6 lg:py-8 container">
         <div className="lg:w-[calc(100%-320px)]">
-          <div className="overflow-hidden bg-white shadow sm:rounded-lg ">
+          <div className="overflow-hidden bg-white shadow-md shadow-purple-200 sm:rounded-lg ">
             <div>
               <JobInfo
                 similarJobsScrollAbout={similarJobsScrollAbout}
                 setApplicationDetailModal={setApplicationDetailModal}
                 jobDataDetail={jobData}
-              // setRedirectModal={setRedirectModal}
-              // setRedirectionUrl={setRedirectionUrl}
-              // Resume={resume}
-              // CrossClick={CrossClick}
-              // SubmitBtn={ResumeUpload}
-              // onChange={(e) => setResumeUpload(e.target.files[0])}
-              // loading={loading}
-              // ref={myRefabout}
+                // setRedirectModal={setRedirectModal}
+                // setRedirectionUrl={setRedirectionUrl}
+                // Resume={resume}
+                // CrossClick={CrossClick}
+                // SubmitBtn={ResumeUpload}
+                // onChange={(e) => setResumeUpload(e.target.files[0])}
+                // loading={loading}
+                // ref={myRefabout}
               />
             </div>
           </div>
+
+          {/* same jobs in diffrent company */}
+
+          {moreJobData && (
+            <div className="mt-8">
+              <div className="border-b shadow rounded-t-lg border-gray-200 bg-white px-4 py-5 sm:px-6">
+                <h3 className="text-base font-semibold leading-6 text-gray-900">
+                  More Jobs
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {
+                  // moreJobData
+                  moreJobData.slice(0, 6).map((job, index) => (
+                    <div key={index}>
+                      <SimilarJobCard jobDetail={job} />
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          )}
+
           <div className="my-6 mx-[4%] lg:mx-0">
             {adShow ? (
               <>
@@ -452,15 +483,13 @@ const jobdetail = (props) => {
                 {`About ${jobData.CompanyName}`}{" "}
               </dt>
               <ul className="mt-1 text-sm text-gray-900">
-                {jobData.companyDetails
-                  ?.split("~")
-                  .map((item, index) => {
-                    return (
-                      <li key={index} className="pt-2">
-                        {item}
-                      </li>
-                    );
-                  })}
+                {jobData.companyDetails?.split("~").map((item, index) => {
+                  return (
+                    <li key={index} className="pt-2">
+                      {item}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div className="mx-[4%] sm:mx-0 px-4 py-6 shadow-md rounded-md">
@@ -468,14 +497,20 @@ const jobdetail = (props) => {
                 Disclaimer
               </dt>
               <p className="mt-1 text-sm text-gray-900">
-                BCCL disclaims any and all representation or warranties of any kind - expressed or implied - about the completeness, accuracy, reliability,  or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Views expressed herein are independent opinions. You may act at your own risk while relying on the information available on the website. Should you decide to act, or omit to act, you should seek appropriate professional advice.
+                BCCL disclaims any and all representation or warranties of any
+                kind - expressed or implied - about the completeness, accuracy,
+                reliability, or availability with respect to the website or the
+                information, products, services, or related graphics contained
+                on the website for any purpose. Views expressed herein are
+                independent opinions. You may act at your own risk while relying
+                on the information available on the website. Should you decide
+                to act, or omit to act, you should seek appropriate professional
+                advice.
               </p>
             </div>
           </div>
         </div>
-        <div>
-
-        </div>
+        <div></div>
         <div className="right-side mt-6 lg:ml-[20px] lg:mt-0  lg:w-[300px]">
           <div className="my-4 sm:mb-4 sm:mt-0">
             {adShow ? (
@@ -488,12 +523,11 @@ const jobdetail = (props) => {
               <SkeletonMrec />
             )}
           </div>
-          {
-            position.length > 0 &&
+          {position.length > 0 && (
             <div className="mx-[4%] sm:mx-0">
               <InterestingJobs positions={position} />
             </div>
-          }
+          )}
           <div className="place-content-center   mt-5  m-auto w-[300px] h-[250px] bg-gray-300 flex items-center text-center">
             {adShow ? (
               <GoogleAd_300x250
@@ -515,8 +549,8 @@ const jobdetail = (props) => {
 export default jobdetail;
 
 export async function getServerSideProps(context) {
-
-  const ipAddress = context.req.headers['x-forwarded-for'] || context.req.socket.remoteAddress;
+  const ipAddress =
+    context.req.headers["x-forwarded-for"] || context.req.socket.remoteAddress;
   // Respond with the IP address
 
   let userAgent;
@@ -531,19 +565,21 @@ export async function getServerSideProps(context) {
     )
   );
 
-  const lastIndex = context.query.id[context.query.id.length - 1]
+  const lastIndex = context.query.id[context.query.id.length - 1];
   let props = {};
   try {
     const allData = await Promise.all([
       JobsDetailApi(lastIndex, ipAddress),
       NewJobsRelatedJobs(context.query.id[0], context.query.id[2], ipAddress),
       CandidateDetailsApi(context.req.cookies.USERID, ipAddress),
+      MoreJobApi(context.query.id[0], context.query.id[2], lastIndex),
     ]);
 
     props = {
       JobDetailsData: allData[0],
       relatedData: allData[1],
       candidateDetail: allData[2],
+      moreJobData: allData[3],
       isMobile,
     };
   } catch (err) {

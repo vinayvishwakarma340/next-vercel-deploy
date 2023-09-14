@@ -10,9 +10,11 @@ import MainHeader from "../Components/MainHeader";
 import SkeletonMrec from "../Components/Skeleton/SkeletonMrec";
 import SkeletonHrec from "../Components/Skeleton/SkeletonHrec";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const PsychometricTest = ({ props }) => {
   const [adShow, setadShow] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -87,6 +89,32 @@ const PsychometricTest = ({ props }) => {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://timesascent.com/",
+                },
+
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Psychometric Test",
+                  item: `https://timesascent.com${router.asPath}`,
+                },
+              ],
+            }),
+          }}
+        />
+
       </Head>
       <MainHeader />
       {/* <PsychometricBanner

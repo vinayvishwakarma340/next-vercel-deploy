@@ -1,1 +1,75 @@
-{"status_code": 200, "status": "SUCCESS", "name": "Times Accents", "tn": "column_1_list", "data": [{"gaindex": "32460", "target": "_blank", "hl": "Sleeping on the job is the latest perk at new-age companies", "imgurl": "https://api.timesascent.com/recruiterpostjob/staticsleeping-on-the-job-is-the-latest-perk_664.webp/2023/01/29/1674989964.webp", "imagesize": "22702", "ag": "timesofindia.com", "id": "157229", "tn": "news", "wu": "https://timesascent.com/articles/Sleeping-on-the-job-is-the-latest-perk-at-new-age-companies/157229"}, {"gaindex": "32461", "target": "_blank", "hl": "Do we need an HR Department for HR too?", "imgurl": "https://api.timesascent.com/recruiterpostjob/staticdo-we-need-an-hr-department-for-hr-too_664.webp/2023/01/29/1674989858.webp", "imagesize": "15172", "ag": "timesofindia.com", "id": "157228", "tn": "news", "wu": "https://timesascent.com/articles/Do-we-need-an-HR-Department-for-HR-too/157228"}, {"gaindex": "32462", "target": "_blank", "hl": "The next alarming trend in HR: Quick quitting", "imgurl": "https://api.timesascent.com/recruiterpostjob/staticthe-next-alarming-trend_664.webp/2023/01/29/1674989681.webp", "imagesize": "20740", "ag": "timesofindia.com", "id": "157227", "tn": "news", "wu": "https://timesascent.com/articles/The-next-alarming-trend-in-HR-Quick-quitting/157227"}, {"gaindex": "32463", "target": "_blank", "hl": "Why companies should give serious thoughts to moonlighting?", "imgurl": "https://api.timesascent.com/recruiterpostjob/staticwhy-companies-should-give-serious-thoughts_664.webp/2023/01/29/1674989572.webp", "imagesize": "43392", "ag": "timesofindia.com", "id": "157226", "tn": "news", "wu": "https://timesascent.com/articles/Why-companies-should-give-serious-thoughts-to-moonlighting/157226"}, {"gaindex": "32464", "target": "_blank", "hl": "Is white collar lethargy here to stay?", "imgurl": "https://api.timesascent.com/recruiterpostjob/staticis-white-collar-lethargy-here-to-stay_664.webp/2023/01/29/1674989339.webp", "imagesize": "15656", "ag": "timesofindia.com", "id": "157225", "tn": "news", "wu": "https://timesascent.com/articles/Is-white-collar-lethargy-here-to-stay/157225"}, {"gaindex": "32465", "target": "_blank", "hl": "Catapult Your Career", "imgurl": "https://api.timesascent.com/recruiterpostjob/staticneerja_664.webp/2023/01/29/1674935863.webp", "imagesize": "30316", "ag": "timesofindia.com", "id": "157207", "tn": "news", "wu": "https://timesascent.com/articles/Catapult-Your-Career/157207"}], "message": "data found"}
+{
+  "status_code": 200,
+  "status": "SUCCESS",
+  "name": "Times Accents",
+  "tn": "column_1_list",
+  "data": [
+    {
+      "gaindex": "32460",
+      "target": "_blank",
+      "hl": "Sleeping on the job is the latest perk at new-age companies",
+      "imgurl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/recruiterpostjob/staticsleeping-on-the-job-is-the-latest-perk_664.webp/2023/01/29/1674989964.webp",
+      "imagesize": "22702",
+      "ag": "timesofindia.com",
+      "id": "157229",
+      "tn": "news",
+      "wu": "https://timesascent.com/articles/Sleeping-on-the-job-is-the-latest-perk-at-new-age-companies/157229"
+    },
+    {
+      "gaindex": "32461",
+      "target": "_blank",
+      "hl": "Do we need an HR Department for HR too?",
+      "imgurl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/recruiterpostjob/staticdo-we-need-an-hr-department-for-hr-too_664.webp/2023/01/29/1674989858.webp",
+      "imagesize": "15172",
+      "ag": "timesofindia.com",
+      "id": "157228",
+      "tn": "news",
+      "wu": "https://timesascent.com/articles/Do-we-need-an-HR-Department-for-HR-too/157228"
+    },
+    {
+      "gaindex": "32462",
+      "target": "_blank",
+      "hl": "The next alarming trend in HR: Quick quitting",
+      "imgurl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/recruiterpostjob/staticthe-next-alarming-trend_664.webp/2023/01/29/1674989681.webp",
+      "imagesize": "20740",
+      "ag": "timesofindia.com",
+      "id": "157227",
+      "tn": "news",
+      "wu": "https://timesascent.com/articles/The-next-alarming-trend-in-HR-Quick-quitting/157227"
+    },
+    {
+      "gaindex": "32463",
+      "target": "_blank",
+      "hl": "Why companies should give serious thoughts to moonlighting?",
+      "imgurl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/recruiterpostjob/staticwhy-companies-should-give-serious-thoughts_664.webp/2023/01/29/1674989572.webp",
+      "imagesize": "43392",
+      "ag": "timesofindia.com",
+      "id": "157226",
+      "tn": "news",
+      "wu": "https://timesascent.com/articles/Why-companies-should-give-serious-thoughts-to-moonlighting/157226"
+    },
+    {
+      "gaindex": "32464",
+      "target": "_blank",
+      "hl": "Is white collar lethargy here to stay?",
+      "imgurl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/recruiterpostjob/staticis-white-collar-lethargy-here-to-stay_664.webp/2023/01/29/1674989339.webp",
+      "imagesize": "15656",
+      "ag": "timesofindia.com",
+      "id": "157225",
+      "tn": "news",
+      "wu": "https://timesascent.com/articles/Is-white-collar-lethargy-here-to-stay/157225"
+    },
+    {
+      "gaindex": "32465",
+      "target": "_blank",
+      "hl": "Catapult Your Career",
+      "imgurl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/recruiterpostjob/staticneerja_664.webp/2023/01/29/1674935863.webp",
+      "imagesize": "30316",
+      "ag": "timesofindia.com",
+      "id": "157207",
+      "tn": "news",
+      "wu": "https://timesascent.com/articles/Catapult-Your-Career/157207"
+    }
+  ],
+  "message": "data found"
+}

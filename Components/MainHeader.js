@@ -29,8 +29,8 @@ import ExploreJobs from "../pages/MainHeaderJson/data.json"
 import { useRouter } from "next/router";
 import Cookies from "js-cookie";
 
-import { HumBurger } from "../Components/Icons/CustomIcons";
-import useRemoveSpaceUrl from "../Components/CustomHook/useRemoveSpaceUrl";
+import { HumBurger } from "./Icons/CustomIcons";
+import useRemoveSpaceUrl from "./CustomHook/useRemoveSpaceUrl";
 import { Menu } from "@headlessui/react";
 // import { signOut } from "next-auth/react";
 import Image from "next/image";
@@ -135,13 +135,13 @@ const MainHeader = (props) => {
       href: "/great-manager-institute",
       icon: BuildingLibraryIcon,
     },
-    {
-      name: "HR Professionals",
-      description:
-        "Display actions and initiatives at workplace that have helped your team.",
-      href: "/hrprofessionals",
-      icon: UsersIcon,
-    },
+    // {
+    //   name: "HR Professionals",
+    //   description:
+    //     "Display actions and initiatives at workplace that have helped your team.",
+    //   href: "/hrprofessionals",
+    //   icon: UsersIcon,
+    // },
   ];
 
   const blogMenu = [
@@ -315,13 +315,13 @@ const MainHeader = (props) => {
       href: "/events",
       icon: Squares2X2Icon,
     },
-    // {
-    //   name: "HR Professionals",
-    //   description:
-    //     "Get all of your questions answered in our forums or contact support.",
-    //   href: "/hrprofessionals",
-    //   icon: UsersIcon,
-    // },
+    {
+      name: "HR Professionals",
+      description:
+        "Get all of your questions answered in our forums or contact support.",
+      href: "/hrprofessionals",
+      icon: UsersIcon,
+    },
     {
       name: "Freelancer",
       description:
@@ -335,12 +335,12 @@ const MainHeader = (props) => {
     //   href: "/Great-Places-To-Work-2023",
     //   icon: BookOpenIcon,
     // },
-    {
-      name: "Leaders of Change",
-      description: "Independence Day Special Feature: Leaders of Change",
-      href: "/leaders-of-change",
-      icon: BookOpenIcon,
-    },
+    // {
+    //   name: "Leaders of Change",
+    //   description: "Independence Day Special Feature: Leaders of Change",
+    //   href: "/leaders-of-change",
+    //   icon: BookOpenIcon,
+    // },
 
     {
       name: "Blogs",
@@ -368,8 +368,8 @@ const MainHeader = (props) => {
     Cookies.remove("googleEmail");
     Cookies.remove("LoginType");
     Cookies.remove("pathname");
-    signOut();
-    sessionStorage.removeItem("_cltk");
+    // signOut();
+    // sessionStorage.removeItem("_cltk");
     if (router.route === "/") {
       setUserLoggedIn(false);
     } else {
@@ -737,7 +737,7 @@ const MainHeader = (props) => {
                 >
                   Events
                 </a>
-                {/* <a
+                <a
                   href="/hrprofessionals"
                   className={`${classNames(
                     pathname === "/hrprofessionals"
@@ -746,8 +746,8 @@ const MainHeader = (props) => {
                   )} text-sm xl:text-base p-2  hover:text-timesPurple`}
                 >
                   HR Professionals
-                </a> */}
-                <a
+                </a>
+                {/* <a
                   href="/leaders-of-change"
                   className={`${classNames(
                     pathname === "/leaders-of-change"
@@ -756,7 +756,7 @@ const MainHeader = (props) => {
                   )} text-sm xl:text-base p-2  hover:text-timesPurple`}
                 >
                   Leaders of Change
-                </a>
+                </a> */}
                 <a
                   href="/freelancer"
                   className={`${classNames(

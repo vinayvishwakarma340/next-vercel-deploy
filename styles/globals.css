@@ -9,6 +9,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
 * {
   scroll-behavior: smooth;
 }
@@ -22,6 +23,7 @@ a {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
+
 .inputFile::file-selector-button {
   display: none;
 }
@@ -34,9 +36,11 @@ a {
   scrollbar-width: auto !important;
   scrollbar-color: #5400c2 #ffffff !important;
 }
-.swiper-pagination-bullet-active{
+
+.swiper-pagination-bullet-active {
   background-color: white !important;
 }
+
 /* Chrome, Edge, and Safari */
 .manual-scroll-bar::-webkit-scrollbar {
   height: 6px;
@@ -90,6 +94,7 @@ input[type="number"] {
   html {
     color-scheme: dark;
   }
+
   body {
     color: black;
     background: white;
@@ -97,22 +102,31 @@ input[type="number"] {
 }
 
 @keyframes animate-progress {
-  from { width: 70%; }
+  from {
+    width: 70%;
+  }
+
   to {
     width: 100%;
     visibility: hidden;
   }
 }
+
 @keyframes animate-progresshalf {
-  from { width: 0%; }
+  from {
+    width: 0%;
+  }
+
   to {
     width: 70%
   }
 }
+
 @keyframes animate-loading {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -122,9 +136,11 @@ input[type="number"] {
 .animate-progress {
   animation: animate-progress 0.4s linear forwards;
 }
+
 .animate-progresshalf {
   animation: animate-progresshalf 1s linear forwards;
 }
+
 .animate-loading {
   animation: animate-loading 1s linear infinite forwards;
 }

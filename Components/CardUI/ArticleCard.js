@@ -13,7 +13,7 @@ const ArticleCard = (props) => {
       <div className={"h-40 sm:h-32 flex-shrink-0 w-full  relative "}>
         <Image
           style={{ objectFit: "cover", objectPosition: "top" }}
-          src={`https://timesascent.com${props.data.imagePath}`}
+          src={`https://timess3spore.s3.amazonaws.com/ndata${props.data.imagePath}`}
           // onError={(e) => console.log("treeeee")}
           fill
           quality={40}

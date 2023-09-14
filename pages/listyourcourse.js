@@ -29,10 +29,7 @@ const ListYourCourse = () => {
   const insertCourse = () => {
     setLoading(true);
     var myHeaders = new Headers();
-    myHeaders.append(
-      "Authorization",
-      process.env.API_TOKEN_AUTH_SERVER
-    );
+    myHeaders.append("Authorization", process.env.API_TOKEN_AUTH_SERVER);
 
     var formdata = new FormData();
     formdata.append("courseName", courseName);
@@ -300,6 +297,35 @@ const ListYourCourse = () => {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://timesascent.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Courses",
+                  item: `https://timesascent.com/courses`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "List Your Course",
+                  item: `https://timesascent.com${router.asPath}`,
+                },
+              ],
+            }),
+          }}
+        />
       </Head>{" "}
       <SuccessModal
         openModal={showModal}
@@ -517,7 +543,7 @@ const ListYourCourse = () => {
                       {/* <legend className="block text-sm font-medium text-gray-700">
                         Course Type
                       </legend> */}
-                      <div className="mt-4 grid grid-cols-4 gap-y-4">
+                      <div className="mt-4 grid grid-cols-2 gap-y-4">
                         <div className="flex items-center">
                           <input
                             type="radio"
@@ -529,7 +555,7 @@ const ListYourCourse = () => {
                           />
                           <label htmlFor="Students" className="ml-3">
                             <span className="block text-sm font-medium text-gray-700 cursor-pointer">
-                              Students
+                              Relevant for students
                             </span>
                           </label>
                         </div>
@@ -538,13 +564,18 @@ const ListYourCourse = () => {
                             type="radio"
                             id="WorkingProfessionals"
                             name="CourseRadio"
-                            onChange={(e) => setCourseCategoryRadio("Working Professionals")}
+                            onChange={(e) =>
+                              setCourseCategoryRadio("Working Professionals")
+                            }
                             value={courseCategoryRadio}
                             className="h-4 w-4 border-gray-300 text-grape-600 focus:ring-grape-500 cursor-pointer"
                           />
-                          <label htmlFor="WorkingProfessionals" className="ml-3">
+                          <label
+                            htmlFor="WorkingProfessionals"
+                            className="ml-3"
+                          >
                             <span className="block text-sm font-medium text-gray-700 cursor-pointer">
-                              Working Professionals
+                              Relevant for working professionals
                             </span>
                           </label>
                         </div>
@@ -559,7 +590,7 @@ const ListYourCourse = () => {
                           />
                           <label htmlFor="Both" className="ml-3">
                             <span className="block text-sm font-medium text-gray-700 cursor-pointer">
-                              Both
+                              Relevant for both
                             </span>
                           </label>
                         </div>
@@ -617,11 +648,11 @@ const ListYourCourse = () => {
                                       /\.(jpg|jpeg|png|gif|webp)$/
                                     )
                                       ? setDisplayCardImage(
-                                        e.target.files[0]
-                                      ) || setImgerror1("")
+                                          e.target.files[0]
+                                        ) || setImgerror1("")
                                       : setImgerror1(
-                                        "Please Upload In Jpg/Png/Webp Format Only"
-                                      );
+                                          "Please Upload In Jpg/Png/Webp Format Only"
+                                        );
                                   }}
                                 />
                               </label>
@@ -729,10 +760,10 @@ const ListYourCourse = () => {
                                       /\.(jpg|jpeg|png|gif|webp)$/
                                     )
                                       ? setCourseLogo(e.target.files[0]) ||
-                                      setImgerror("")
+                                        setImgerror("")
                                       : setImgerror(
-                                        "Please Upload In Jpg/Png/Webp Format Only"
-                                      );
+                                          "Please Upload In Jpg/Png/Webp Format Only"
+                                        );
                                   }}
                                 />
                               </label>

@@ -38,7 +38,7 @@ withWebPack = {
     API_TOKEN_AUTH_CLIENT: "Token 77927b69bb144b065ca11bf2a9d452819cd852db",
     API_TOKEN_AUTH_SERVER: "Token 4YzpGk8Vf8IcxzxQ68teZ2KM5iX8SktW5RN4iz92",
 
-    Live_API_URL: "https://api.timesascent.com",
+    Live_API_URL: "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA",
 
   },
   /* async headers() {
@@ -56,6 +56,7 @@ withWebPack = {
 
     domains: [
       "timesascent.com",
+      "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA",
       "api.timesascent.com",
       "paperads.timesascent.com",
       "images.unsplash.com",

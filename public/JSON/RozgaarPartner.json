@@ -5,7 +5,7 @@
     "industry": "",
     "image": "/RozgaarPartner/Amazon_logo.svg",
     "company_id": "",
-    "baseUrl": "https://api.timesascent.com/"
+    "baseUrl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/"
   },
   {
     "keyIndex": "140",
@@ -13,7 +13,7 @@
     "industry": "",
     "image": "/RozgaarPartner/Digital_India.svg",
     "company_id": "53457",
-    "baseUrl": "https://api.timesascent.com/"
+    "baseUrl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/"
   },
   {
     "keyIndex": "124",
@@ -21,7 +21,7 @@
     "industry": "",
     "image": "/RozgaarPartner/Hero_Insurance.svg",
     "company_id": "10967",
-    "baseUrl": "https://api.timesascent.com/"
+    "baseUrl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/"
   },
   {
     "keyIndex": "198",
@@ -29,7 +29,7 @@
     "industry": "",
     "image": "/RozgaarPartner/Hero.svg",
     "company_id": "53927",
-    "baseUrl": "https://api.timesascent.com/"
+    "baseUrl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/"
   },
   {
     "keyIndex": "201",
@@ -37,7 +37,7 @@
     "industry": "",
     "image": "/RozgaarPartner/Hyundai.svg",
     "company_id": "53124",
-    "baseUrl": "https://api.timesascent.com/"
+    "baseUrl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/"
   },
 
   {
@@ -46,6 +46,6 @@
     "industry": "",
     "image": "/RozgaarPartner/Skill_India.svg",
     "company_id": "53877",
-    "baseUrl": "https://api.timesascent.com/"
+    "baseUrl": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/"
   }
 ]

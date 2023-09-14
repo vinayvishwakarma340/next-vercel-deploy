@@ -120,6 +120,7 @@ const certificationOfWinners = ({ props }) => {
                   "@type": "ListItem",
                   position: 3,
                   name: "Certificate of Merit Winners",
+                  item: `https://timesascent.com${router.asPath}`,
                 },
               ],
             }),

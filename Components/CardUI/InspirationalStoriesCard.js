@@ -31,11 +31,11 @@ const InspirationalStoriesCard = (props) => {
         <div className="h-32 w-full  relative overflow-hidden">
           <Image
             style={{ objectFit: "cover" }}
-            src={`https://timesascent.com${props.data.imagePath}`}
+            src={`https://timess3spore.s3.amazonaws.com/ndata${props.data.imagePath}`}
             fill
             alt="inspiration stories image"
-            // placeholder="blur"
-            // blurDataURL="https://timesascent.com/TimeDummyLogo.webp"
+          // placeholder="blur"
+          // blurDataURL="https://timesascent.com/TimeDummyLogo.webp"
           />
         </div>
       </div>

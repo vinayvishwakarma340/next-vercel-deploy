@@ -18,6 +18,7 @@ import PrimayWidgetGMI from "../../Components/Widget/PrimayWidgetGMI";
 import ArticleCardGMI from "../../Components/CardUI/ArticleCardGMI";
 import ManagersCardGMI from "../../Components/CardUI/ManagersCardGMI";
 import HomeCarousel from "../../Components/CarouselBanner/HomeCarousel";
+import { useRouter } from "next/router";
 
 const pages = [
   {
@@ -53,6 +54,7 @@ const index = ({ props }) => {
     return <FourZeroFour />;
   }
 
+  const router = useRouter();
   const getForherSreenData = props?.GreatManagerInstituteJson.Article;
   const greatManagerInstituteJson =
     props?.GreatManagerInstituteJson.GeneralManager;
@@ -62,82 +64,6 @@ const index = ({ props }) => {
   const certificationOfWinnersJson =
     props?.GreatManagerInstituteJson.GMIWinners;
 
-  // const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  // const [messageText, setMessageText] = useState("");
-  // const [currentIndex, setCurrentIndex] = useState(0);
-  // const [person, setPerson] = useState({ name: "", email: "" });
-  // const [personValidation, setPersonValidation] = useState({
-  //   name: false,
-  //   email: false,
-  // });
-
-  // const nextbutton = useRef(null);
-
-  // useEffect(() => {
-  //   const keyListener = document.addEventListener("keydown", (event) => {
-  //     if (event.key === "Enter") {
-  //       nextbutton.current.click();
-  //     }
-  //   });
-  //   return () => document.removeEventListener("keydown", keyListener);
-  // }, []);
-
-  // Function to handle next button click
-  // const handleNextClick = () => {
-  //   if (currentIndex === 2 && !person.name) {
-  //     setPersonValidation({ ...personValidation, name: true });
-  //   }
-  //   if (currentIndex === 2 && person.name) {
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % 4);
-  //     setPersonValidation({ ...personValidation, name: false });
-  //   }
-  //   if (currentIndex !== 2 && currentIndex !== 3) {
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % 4);
-  //   }
-  // };
-
-  // Function to handle previous button click
-  // const handlePrevClick = () => {
-  //   setCurrentIndex((prevIndex) => (prevIndex === 0 ? 3 : prevIndex - 1));
-  // };
-
-  // const createNominateYourManager = () => {
-  //   if (person.email) {
-  //     var myHeaders = new Headers();
-  //     myHeaders.append("Authorization", process.env.API_TOKEN_AUTH_SERVER);
-
-  //     var formdata = new FormData();
-  //     formdata.append("ManagerEmail", person.email);
-  //     formdata.append("ManagerName", person.name);
-
-  //     var requestOptions = {
-  //       method: 'POST',
-  //       headers: myHeaders,
-  //       body: formdata,
-  //       redirect: 'follow'
-  //     };
-
-  //     fetch("https://api.timesascent.com/v1/admin1_1/NominateInsert", requestOptions)
-  //       .then(response => response.json())
-  //       .then(result => {
-  //         console.log(result)
-  //         if (result.status === "Success" && result.status_code == 200) {
-  //           setMessageText("Your data submitted successfully");
-  //           setShowSuccessMessage(true);
-  //           setPersonValidation({
-  //             ...personValidation,
-  //             email: false,
-  //           })
-  //         }
-  //       })
-  //       .catch(error => console.log('error', error));
-  //   } else {
-  //     setPersonValidation({
-  //       ...personValidation,
-  //       email: true,
-  //     })
-  //   }
-  // }
 
   return (
     <div>
@@ -198,7 +124,7 @@ const index = ({ props }) => {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
-        {/* <script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -213,40 +139,17 @@ const index = ({ props }) => {
                 },
                 {
                   "@type": "ListItem",
-                  position: 1,
-                  name: "Events",
+                  position: 2,
+                  name: "Great Manager Institute",
+                  item: `https://timesascent.com${router.asPath}`,
                 },
               ],
             }),
           }}
-        /> */}
+        />
       </Head>
 
       <MainHeader />
-
-      {/* <div className="relative">
-        <div className={"hidden sm:block relative"}>
-          <Image
-            priority
-            style={{ objectFit: "cover" }}
-            src="/greateManagers/Banner/ManagersWeb.webp"
-            width={2000}
-            height={500}
-            alt="Great People Managers"
-          />
-        </div>
-        <div className={"block sm:hidden relative"}>
-          <Image
-            priority
-
-            style={{ objectFit: "cover" }}
-            src="/greateManagers/Banner/ManagersMobile.webp"
-            width={768}
-            height={307}
-            alt="Great People Managers"
-          />
-        </div>
-      </div> */}
 
       <HomeCarousel isMobile={props.isMobile} data={gmiBanner} />
 
@@ -293,26 +196,7 @@ const index = ({ props }) => {
                   />
                 </div>
               </div>
-              {/* <div className="relative">
-                <div className={"block sm:hidden relative"}>
-                  <Image
-                    style={{ objectFit: "cover", borderRadius: "0.375rem" }}
-                    src="/greateManagers/GreatePeopleManagerMobile.webp"
-                    width={390}
-                    height={160}
-                    alt="Great People Managers"
-                  />
-                </div>
-                <div className={"hidden sm:block relative"}>
-                  <Image
-                    style={{ objectFit: "cover", borderRadius: "0.375rem" }}
-                    src="/greateManagers/GreatePeopleManagerWeb.webp"
-                    width={1655}
-                    height={440}
-                    alt="Great People Managers"
-                  />
-                </div>
-              </div> */}
+
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {greatManagerInstituteJson.slice(0, 12).map((item, index) => {
                   return (
@@ -349,26 +233,7 @@ const index = ({ props }) => {
                   />
                 </div>
               </div>
-              {/* <div className="relative">
-                <div className={"block sm:hidden relative"}>
-                  <Image
-                    style={{ objectFit: "cover", borderRadius: "0.375rem" }}
-                    src="/greateManagers/GreatePeopleManagerMobile.webp"
-                    width={390}
-                    height={160}
-                    alt="Great People Managers"
-                  />
-                </div>
-                <div className={"hidden sm:block relative"}>
-                  <Image
-                    style={{ objectFit: "cover", borderRadius: "0.375rem" }}
-                    src="/greateManagers/GreatePeopleManagerWeb.webp"
-                    width={1655}
-                    height={440}
-                    alt="Great People Manager"
-                  />
-                </div>
-              </div> */}
+
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {leadershipFactoryJson.slice(0, 12)?.map((item, keyindex) => {
                   return <LeadershipFactory data={item} key={keyindex} />;
@@ -389,15 +254,7 @@ const index = ({ props }) => {
                   </div>
                 </div>
 
-                {/* <div className={"ml-4 relative w-[50px] h-[50px]"}>
-                  <Image
-                    style={{ objectFit: "cover", borderRadius: "0.375rem" }}
-                    src="/greateManagers/LeadershipFactoriesStamp.webp"
-                    width={50}
-                    height={50}
-                    alt="Great People Managers"
-                  />
-                </div> */}
+
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {certificationOfWinnersJson
@@ -440,13 +297,7 @@ const index = ({ props }) => {
                 <PrimayWidgetGMI {...widgetTwo} />
               </div>
 
-              {/* <div className="mt-6 sm:mt-0 ">
-                <GoogleAd_300x250
-                  path="/1064661/ta.com_mrec6_home"
-                  ads_Id="div-gpt-ad-1674551324910-0"
-                  size={[[300, 250]]}
-                />
-              </div> */}
+
             </section>
           </div>
 
@@ -470,16 +321,7 @@ const index = ({ props }) => {
             </div>
           </div>
         </div>
-        {/* <section className="mt-8 pt-8 border-t-2  border-dashed sm:flex flex-col w-full items-start  justify-between ">
-          <div className="font-playfairDisplay">
-            <HeadingWithIcon
-              headingText="Nominate your Manager"
-            // href="/GreatePeopleManagers"
-            />
 
-          </div>
-
-        </section> */}
       </main>
 
       <Footer />

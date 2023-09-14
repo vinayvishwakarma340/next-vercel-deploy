@@ -10,7 +10,7 @@
       "Description": "Get a chance to share and feature your growth story with us",
       "RedirectionUrl": "/professionals-growth-journey",
       "PageName": "Movement of Professionals",
-      "IconImage": "https://api.timesascent.com/recruiterpostjob/staticGrowth.svg/2022/08/18/1660816388.svg",
+      "IconImage": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/recruiterpostjob/staticGrowth.svg/2022/08/18/1660816388.svg",
       "IsDeleted": "0",
       "IsPublished": "1",
       "CreatedAt": "2022-08-18T15:23:08",

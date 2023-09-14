@@ -8,7 +8,7 @@ const ArticleSmallCard = ({ data }) => {
     >
       <div className="relative w-20 h-20 shrink-0">
         <Image
-          src={`https://timesascent.com${data.imagePath}`}
+          src={`https://timess3spore.s3.amazonaws.com/ndata${data.imagePath}`}
           alt="image"
           fill
           priority={true}

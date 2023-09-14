@@ -121,7 +121,7 @@ const NewJobCard = (props) => {
                       )}
                     </div>
                   </a> */}
-                  <a
+                  <Link
                     href={
                       !router.asPath.includes("partner-jobs")
                         ? "/NewCompanyProfile/" +
@@ -171,7 +171,7 @@ const NewJobCard = (props) => {
 
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="flex flex-shrink-0   px-2">
                   {props.jobDataSearch?.Category ? (
@@ -366,7 +366,7 @@ const NewJobCard = (props) => {
                         )}/${props.jobDataSearch?.JobId}`}
                       />
                     )}
-                    <a
+                    <Link
                       href={
                         router.asPath.includes("partner-jobs")
                           ? `/partner-jobs/${useRemoveSpaceUrl(
@@ -387,14 +387,14 @@ const NewJobCard = (props) => {
                           )}/${props.jobDataSearch?.JobId}`
                       }
                     >
-                      <button
+                      <div
                         onClick={() => Cookies.set("Ref", true)}
                         type="button"
                         className="ml-8 inline-flex items-center rounded-full border border-transparent bg-purple-600 px-3 py-2  text-sm font-medium leading-4 text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                       >
                         Apply
-                      </button>
-                    </a>
+                      </div>
+                    </Link>
                   </span>
                 </div>
               </div>

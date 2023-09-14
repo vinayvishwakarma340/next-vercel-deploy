@@ -1,1 +1,39 @@
-{"status_code": 200, "status": "SUCCESS", "data": [{"ID": "22", "KeyIndex": "22", "DynamicWidgetID": "1e6ff548-ed75-11ec-929f-064df626ed42", "Title": "List Your Event", "Description": "Looking out to Host your Event Online & Get the Desired Audience", "RedirectionUrl": "https://timesascent.com/listYourEvent", "PageName": "Careers", "IconImage": "https://api.timesascent.com/recruiterpostjob/staticevent_widget_icon.png/2022/06/16/1655384781.png", "IsDeleted": "0", "IsPublished": "1", "CreatedAt": "2022-06-16T18:36:21", "CreatedBy": "System", "UpdatedAt": "2022-06-16T18:36:21", "UpdatedBy": "System"}, {"ID": "23", "KeyIndex": "23", "DynamicWidgetID": "b4eaa916-08cb-11ed-929f-064df626ed42", "Title": "List Your Course", "Description": "Please click here to list your course on TimesAscent", "RedirectionUrl": "https://timesascent.com/listyourcourse", "PageName": "Careers", "IconImage": "https://api.timesascent.com/recruiterpostjob/staticCourse-02.png/2022/07/21/1658390652.png", "IsDeleted": "0", "IsPublished": "1", "CreatedAt": "2022-07-21T13:34:12", "CreatedBy": "System", "UpdatedAt": "2022-07-21T13:34:12", "UpdatedBy": "System"}], "message": "Data found"}
+{
+  "status_code": 200,
+  "status": "SUCCESS",
+  "data": [
+    {
+      "ID": "22",
+      "KeyIndex": "22",
+      "DynamicWidgetID": "1e6ff548-ed75-11ec-929f-064df626ed42",
+      "Title": "List Your Event",
+      "Description": "Looking out to Host your Event Online & Get the Desired Audience",
+      "RedirectionUrl": "https://timesascent.com/listYourEvent",
+      "PageName": "Careers",
+      "IconImage": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/recruiterpostjob/staticevent_widget_icon.png/2022/06/16/1655384781.png",
+      "IsDeleted": "0",
+      "IsPublished": "1",
+      "CreatedAt": "2022-06-16T18:36:21",
+      "CreatedBy": "System",
+      "UpdatedAt": "2022-06-16T18:36:21",
+      "UpdatedBy": "System"
+    },
+    {
+      "ID": "23",
+      "KeyIndex": "23",
+      "DynamicWidgetID": "b4eaa916-08cb-11ed-929f-064df626ed42",
+      "Title": "List Your Course",
+      "Description": "Please click here to list your course on TimesAscent",
+      "RedirectionUrl": "https://timesascent.com/listyourcourse",
+      "PageName": "Careers",
+      "IconImage": "https://vb1pzsq0m2.execute-api.ap-southeast-1.amazonaws.com/TA/recruiterpostjob/staticCourse-02.png/2022/07/21/1658390652.png",
+      "IsDeleted": "0",
+      "IsPublished": "1",
+      "CreatedAt": "2022-07-21T13:34:12",
+      "CreatedBy": "System",
+      "UpdatedAt": "2022-07-21T13:34:12",
+      "UpdatedBy": "System"
+    }
+  ],
+  "message": "Data found"
+}

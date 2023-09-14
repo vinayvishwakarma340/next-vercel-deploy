@@ -318,35 +318,7 @@ const jobs = ({ props }) => {
       setDeviceType("Desktop");
     }
   };
-  // const fetchJobSuggentions = () => {
-  //   var myHeaders = new Headers();
-  //   myHeaders.append("Authorization", process.env.API_TOKEN_AUTH_SERVER);
 
-  //   var requestOptions = {
-  //     method: 'POST',
-  //     headers: myHeaders,
-  //     redirect: 'follow'
-  //   };
-
-  //   fetch("https://api.timesascent.com/v1/api/apiTimes/AllDomainJSON", requestOptions)
-  //     .then(response => response.json())
-  //     .then(result => {
-  //       // console.log(result.name.data);
-  //       setJobSuggestions(result.name);
-  //     })
-  //     .catch(error => console.log('error', error));
-  // }
-  // const checkJSON = () => {
-  //   let fakeArr = [];
-  //   fakeArr = positionFilter.filter((item) => {
-  //     return item.skill === title;
-  //   });
-  //   if (fakeArr.length === 0) {
-  //     return false;
-  //   } else {
-  //     return true;
-  //   }
-  // }; 
 
   const saveSearchJob = (title, location) => {
     setBtnLoader(true)
@@ -941,13 +913,7 @@ const jobs = ({ props }) => {
                 <div className="h-[230px] ">
                   <FreelancerWidget {...freelancerWidgetData} />
                 </div>
-                {/* <SecondryWidget
-                    iconUrl="https://api.timesascent.com/recruiterpostjob/staticGrowth.svg/2022/08/18/1660816388.svg"
-                    text2="HR Professional"
-                    text3="Recognizing HR Excellence "
-                    buttonText="Share your profile"
-                    href="/share-your-profile"
-                  /> */}
+
               </div>
             </section>
 

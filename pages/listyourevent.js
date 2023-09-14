@@ -320,7 +320,7 @@ const ListEvent = () => {
                         <input
                           type="text"
                           name="provider-name"
-                          required
+                          // required
                           id="provider-name"
                           autoComplete="given-name"
                           onChange={(e) => {
@@ -342,7 +342,7 @@ const ListEvent = () => {
                         <input
                           type="email"
                           name="provider-email"
-                          required
+                          // required
                           id="provider-email"
                           autoComplete="given-name"
                           onChange={(e) => {
@@ -367,7 +367,7 @@ const ListEvent = () => {
                           maxLength="10"
                           minLength="0"
                           pattern="^[6789][0-9]{9}$"
-                          required
+                          // required
                           id="provider-contact"
                           autoComplete="given-name"
                           onChange={(e) => {

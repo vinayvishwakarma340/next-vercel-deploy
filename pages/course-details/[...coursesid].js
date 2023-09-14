@@ -14,6 +14,7 @@ import SkeletonMrec from "../../Components/Skeleton/SkeletonMrec";
 import * as gtag from "../../lib/gtag";
 // import { SkeletonTextPlaceholder } from "../../Components/Skeleton/SkeletonJobDetail";
 import SimilarJob from "../../Components/jobs/JobDetail/SimilarJob";
+import Image from "next/image";
 
 const coursedetail = ({ coursedetail }) => {
   const router = useRouter();
@@ -95,7 +96,6 @@ const coursedetail = ({ coursedetail }) => {
   };
 
   const getSimilarJobsFunc = () => {
-
     var myHeaders = new Headers();
     myHeaders.append("Authorization", process.env.API_TOKEN_AUTH_SERVER);
 
@@ -104,21 +104,24 @@ const coursedetail = ({ coursedetail }) => {
     formdata.append("Category", "engineer");
 
     var requestOptions = {
-      method: 'POST',
+      method: "POST",
       headers: myHeaders,
       body: formdata,
-      redirect: 'follow'
+      redirect: "follow",
     };
 
-    fetch(`${process.env.Live_API_URL}/v1/admin1_1/CourseJobTag`, requestOptions)
-      .then(response => response.json())
-      .then(result => {
+    fetch(
+      `${process.env.Live_API_URL}/v1/admin1_1/CourseJobTag`,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => {
         if (result.status_code == 200 && result.status === "Success") {
           setSimilarJobs(result.Data);
         }
       })
-      .catch(error => console.log('error', error));
-  }
+      .catch((error) => console.log("error", error));
+  };
 
   // event fire after click on get started button
   const handlerGetStarted = (courseId, candidateId) => {
@@ -134,10 +137,7 @@ const coursedetail = ({ coursedetail }) => {
 
   const partnerClick = async () => {
     var myHeaders = new Headers();
-    myHeaders.append(
-      "Authorization",
-      process.env.API_TOKEN_AUTH_SERVER
-    );
+    myHeaders.append("Authorization", process.env.API_TOKEN_AUTH_SERVER);
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
@@ -199,12 +199,12 @@ const coursedetail = ({ coursedetail }) => {
       Cookies.set(
         "pathname",
         "course-details" +
-        "/" +
-        router.query.coursesid[0] +
-        "/" +
-        router.query.coursesid[1] +
-        "/" +
-        router.query.coursesid[2]
+          "/" +
+          router.query.coursesid[0] +
+          "/" +
+          router.query.coursesid[1] +
+          "/" +
+          router.query.coursesid[2]
       );
       router.push("/times-ascent-signin");
     }
@@ -214,17 +214,22 @@ const coursedetail = ({ coursedetail }) => {
     setOpen(false);
   };
 
+  // console.log(coursedetail, "testing");
+
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
-        <title>{`${coursedetail.data.providerName || " "
-          } free online courses  - timesascent.com`}</title>
+        <title>{`${
+          coursedetail.data.providerName || " "
+        } free online courses  - timesascent.com`}</title>
         <meta
           name="description"
-          content={`${coursedetail.data.course_title || " "
-            }. Free online course by ${coursedetail.data.providerName
-            } - timesascent.com`}
+          content={`${
+            coursedetail.data.course_title || " "
+          }. Free online course by ${
+            coursedetail.data.providerName
+          } - timesascent.com`}
         />
         <link
           rel="canonical"
@@ -258,9 +263,11 @@ const coursedetail = ({ coursedetail }) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content={`${coursedetail.data.course_title || " "
-            }. Free online course by ${coursedetail.data.providerName
-            } - timesascent.com`}
+          content={`${
+            coursedetail.data.course_title || " "
+          }. Free online course by ${
+            coursedetail.data.providerName
+          } - timesascent.com`}
         />
         <meta
           property="og:url"
@@ -288,9 +295,11 @@ const coursedetail = ({ coursedetail }) => {
         />
         <meta
           property="twitter:description"
-          content={`${coursedetail.data.course_title || " "
-            }. Free online course by ${coursedetail.data.providerName
-            } - timesascent.com`}
+          content={`${
+            coursedetail.data.course_title || " "
+          }. Free online course by ${
+            coursedetail.data.providerName
+          } - timesascent.com`}
         />
         <meta property="twitter:card" content="summary" />
         <meta
@@ -360,20 +369,20 @@ const coursedetail = ({ coursedetail }) => {
       />
       <MainHeader />
       <div className="bg-white">
-        <div className=" py-2 sm:py-5 sm:px-6lg:gap-x-2 mx-auto container ">
+        <div className=" py-2 sm:py-5 sm:px-6 lg:gap-x-2 mx-auto container ">
           <div className=" mb-6">
             <BreadCrumbs data={pages} />
           </div>
           <div className="sm:flex   ">
             <div className="w-auto ">
-              <div className="mt-4 sm:flex sm:justify-between sm:items-start">
+              <div className="mt-4 sm:flex sm:justify-between mb-4 sm:items-center">
                 <h1 className="text-xl w-auto font-bold tracking-tight text-gray-900 ">
                   {coursedetail.data.course_title}
                 </h1>
-                <div className="sm:ml-4 w-[120px] sm:text-right  ">
+                <div className="sm:ml-4 w-[120px]sm:text-right  ">
                   <button
                     type="submit"
-                    className="inline-flex rounded-md  mt-2 border border-transparent bg-timesPurple py-2 px-4 w-7xl text-sm font-medium text-white shadow-sm hover:bg-timesPurple focus:outline-none focus:ring-2 focus:ring-timesPurple focus:ring-offset-2"
+                    className="inline-flex rounded  mt-2 border border-transparent bg-timesPurple py-2 px-4 w-7xl text-sm font-medium text-white shadow-sm hover:bg-timesPurple focus:outline-none focus:ring-2 focus:ring-timesPurple focus:ring-offset-2"
                     onClick={() => {
                       // onClickLog();
                       handlerGetStarted(
@@ -387,59 +396,150 @@ const coursedetail = ({ coursedetail }) => {
                   </button>
                 </div>
               </div>
-              <div className="overflow-hidden mt-5">
+              {/* <div className="overflow-hidden mt-5">
                 <img
                   src={coursedetail.data.course_image}
                   alt={coursedetail.data.course_title}
                   className="h-auto w-full sm:w-3/4  rounded-lg"
                 />
-              </div>
+              </div> */}
 
+              <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
+                <Image
+                  src={coursedetail.data.course_image}
+                  fill
+                  priority={true}
+                  quality={75}
+                  alt={coursedetail.data.course_title}
+                  className="absolute inset-0 -z-10 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
+                <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 
-              <section aria-labelledby="information-heading" className="mt-4">
-                <div className="flex items-center">
-                  <p className="text-sm text-gray-900 sm:text-lg">
-                    {coursedetail.data.course_category}
-                  </p>
-                </div>
+                {/* <div className="absolute left-0 px-4"> */}
+                {/* <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
+                    <time dateTime={data.updatedDate} className="mr-8">
+                      {data.updatedDate}
+                    </time>
+                    <div className="-ml-4 flex items-center gap-x-4">
+                      <svg
+                        viewBox="0 0 2 2"
+                        className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50"
+                      >
+                        <circle cx={1} cy={1} r={1} />
+                      </svg>
+                      <div className="flex gap-x-2.5">
+                        <img
+                  src={post.author.imageUrl}
+                  alt=""
+                  className="h-6 w-6 flex-none rounded-full bg-white/10"
+                />
+                        {data.author}
+                      </div>
+                    </div>
+                  </div> */}
+                {/* <h1 className="mt-3 sm:ml-4 text-2xl pb-4 font-semibold leading-6 text-white">
+                    <div>
+                      <span className="absolute" />
+                      {coursedetail.data.course_title}
+                    </div>
+                  </h1> */}
+                {/* <p className="text-sm mt-2 leading-6 text-white">
+                    {data.shortDescription}
+                  </p> */}
 
-                <div className="mt-4 space-y-6">
-                  <div className="prose mt-0 text-black lg:max-w-none text-sm lg:text-sm lg:mt-4">
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: coursedetail?.data.course_desc,
+                {/* <div className="sm:ml-4 w-[120px]">
+                    <button
+                      type="submit"
+                      className="inline-flex rounded mt-2 border border-transparent bg-timesPurple py-2 px-4 w-7xl text-base font-medium text-white shadow-sm hover:bg-timesPurple focus:outline-none focus:ring-2 focus:ring-timesPurple focus:ring-offset-2"
+                      onClick={() => {
+                        // onClickLog();
+                        handlerGetStarted(
+                          coursedetail.data.course_id,
+                          Cookies.get("USERID")
+                        );
+                        handleLog();
                       }}
+                    >
+                      Get Started
+                    </button>
+                  </div> */}
+                {/* </div> */}
+              </article>
+              <section
+                aria-labelledby="information-heading"
+                className="relative"
+              >
+                {/* <div className="absolute -top-24 left-4">
+                  <div className="flex pb-4 items-center">
+                    <span class="text-white text-sm font-medium mr-2 px-2.5 py-0.5 rounded border border-white">
+                      {coursedetail.data.course_category}
+                    </span>
+                  </div>
+                  <div className="w-[100px] shadow-lg">
+                    <img
+                      src={coursedetail.data.courseProviderLogo}
+                      alt={coursedetail.data.course_title}
+                      className="w-[100px] shadow-lg h-[100px] bg-red"
                     />
                   </div>
-                </div>
+                </div> */}
+                <div className="pt-6">
+                  <div className="flex items-center">
+                    <p className="text-base font-semibold text-timesPurple sm:text-lg">
+                      {coursedetail.data.course_category}
+                    </p>
+                  </div>
 
-                <div className="mt-4 flex items-center">
-                  <CheckIcon
-                    className="h-5 w-5 flex-shrink-0 text-green-500"
-                    aria-hidden="true"
-                  />
-                  <p className="ml-2 text-sm text-gray-500">Duration</p>
-                  <p className="ml-2 text-sm text-gray-500">
-                    ({coursedetail.data.courseDuration})
+                  <div className="mt-4 space-y-6">
+                    <div className="prose mt-0 text-black lg:max-w-none text-sm lg:text-sm lg:mt-4">
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: coursedetail?.data.course_desc,
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex items-center">
+                    <CheckIcon
+                      className="h-5 w-5 flex-shrink-0 text-green-500"
+                      aria-hidden="true"
+                    />
+                    <p className="ml-2 text-sm text-gray-500">Duration</p>
+                    <p className="ml-2 text-sm text-gray-500">
+                      ({coursedetail.data.courseDuration})
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      src={coursedetail.data.courseProviderLogo}
+                      alt={coursedetail.data.course_title}
+                      className="w-[20%] h-[20%] "
+                    />
+                  </div>
+
+                  <div className="font-medium text-gray-500">Course by</div>
+                  <p className="text-gray-500">
+                    {coursedetail.data.providerName}
+                  </p>
+
+                  <div className="font-medium text-gray-500 mt-4">
+                    Disclaimer
+                  </div>
+                  <p className="text-gray-500">
+                    BCCL disclaims any and all representation or warranties of
+                    any kind - expressed or implied - about the completeness,
+                    accuracy, reliability, or availability with respect to the
+                    website or the information, products, services, or related
+                    graphics contained on the website for any purpose. Views
+                    expressed herein are independent opinions. You may act at
+                    your own risk while relying on the information available on
+                    the website. Should you decide to act, or omit to act, you
+                    should seek appropriate professional advice.
                   </p>
                 </div>
               </section>
-              <div>
-                <img
-                  src={coursedetail.data.courseProviderLogo}
-                  alt={coursedetail.data.course_title}
-                  className="w-[20%] h-[20%] "
-                />
-              </div>
-
-              <div className="font-medium text-gray-500">Course by</div>
-              <p className="text-gray-500">{coursedetail.data.providerName}</p>
-
-
-              <div className="font-medium text-gray-500 mt-4">Disclaimer</div>
-              <p className="text-gray-500">BCCL disclaims any and all representation or warranties of any kind - expressed or implied - about the completeness, accuracy, reliability,  or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Views expressed herein are independent opinions. You may act at your own risk while relying on the information available on the website. Should you decide to act, or omit to act, you should seek appropriate professional advice.</p>
-
-
 
               <div className="block sm:hidden lg:mt-14 mt-5 ">
                 {adShow ? (
@@ -466,12 +566,7 @@ const coursedetail = ({ coursedetail }) => {
                   <SkeletonMrec />
                 )}
               </div>
-              {
-                similarJobs &&
-                <SimilarJob data1={similarJobs} />
-              }
-
-
+              {similarJobs && <SimilarJob data1={similarJobs} />}
             </div>
           </div>
         </div>

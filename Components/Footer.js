@@ -14,6 +14,7 @@ const navigation = {
     { name: "Freelancer", href: "/freelancer" },
     { name: "GPTW-23", href: "/Great-Places-To-Work-2023" },
     { name: "GPTW-22", href: "/Great-Places-To-Work-2022" },
+    { name: "Leaders of Change", href: "/leaders-of-change" },
   ],
   Information: [
     { name: "About us", href: "/about-us" },
@@ -305,7 +306,7 @@ const Footer = () => {
             <span className="text-base text-gray-500 text-center">
               Powered By
               <a href="https://www.sasone.in/" target="_blank" className="text-timesPurple hover:underline"> SAS One </a>
-              | V1.0.1
+              | V1.0.4
             </span>
           </div>
         </div>

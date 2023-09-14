@@ -171,7 +171,7 @@ const managerDetail = ({ props }) => {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
-        {/* <script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -184,16 +184,28 @@ const managerDetail = ({ props }) => {
                   name: "Home",
                   item: "https://timesascent.com/",
                 },
-
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Great Manager Institute",
+                  item: "https://timesascent.com/great-manager-institute",
+                },
                 {
                   "@type": "ListItem",
                   position: 3,
-                  name: "For Her",
+                  name: "Top 100 Managers",
+                  item: "https://timesascent.com/top-100-great-people-managers-of-2023",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: `${props?.managerDetailById.Data.ManagerName}`,
+                  item: `https://timesascent.com${router.asPath}`,
                 },
               ],
             }),
           }}
-        /> */}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -654,7 +654,7 @@ const NewComapnyProfile = (props) => {
                                 ) : (
                                   <img
                                     className="mx-auto w-28 h-28 "
-                                    src={`https://timesascent.com/${companydata.imagePath}`}
+                                    src={`https://timess3spore.s3.amazonaws.com/ndata/${companydata.imagePath}`}
                                     alt=""
                                   />
                                 )}
